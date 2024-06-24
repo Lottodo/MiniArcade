@@ -1,7 +1,11 @@
-[gd_scene format=3 uid="uid://cfr4n4b4w5nyd"]
+[gd_scene load_steps=2 format=3 uid="uid://cfr4n4b4w5nyd"]
+
+[ext_resource type="Script" path="res://scenes/player_base/player_base.gd" id="1_klk5r"]
 
 [node name="PlayerBase" type="CharacterBody2D"]
+script = ExtResource("1_klk5r")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.875, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

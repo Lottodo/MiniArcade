@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgs0xhtuj1rc2"
-path="res://.godot/imported/phoenix_wright.png-77f980cec083864b519c8e91a2b904ae.ctex"
+path="res://.godot/imported/phoenix_wright.png-458f0b0ee6e2c7d9ba42cfa1f09df187.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/attorney_minigame/images/phoenix_wright.png"
-dest_files=["res://.godot/imported/phoenix_wright.png-77f980cec083864b519c8e91a2b904ae.ctex"]
+source_file="res://assets/Attorney_Minigame/images/phoenix_wright.png"
+dest_files=["res://.godot/imported/phoenix_wright.png-458f0b0ee6e2c7d9ba42cfa1f09df187.ctex"]
 
 [params]
 

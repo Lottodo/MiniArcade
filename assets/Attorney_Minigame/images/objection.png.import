@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwy5bcdd7m0bi"
-path="res://.godot/imported/objection.png-b40b5d96f08f66291d36136abebabf09.ctex"
+path="res://.godot/imported/objection.png-284d3547be266c7b3b0c3b1c4973f3ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/attorney_minigame/images/objection.png"
-dest_files=["res://.godot/imported/objection.png-b40b5d96f08f66291d36136abebabf09.ctex"]
+source_file="res://assets/Attorney_Minigame/images/objection.png"
+dest_files=["res://.godot/imported/objection.png-284d3547be266c7b3b0c3b1c4973f3ec.ctex"]
 
 [params]
 
