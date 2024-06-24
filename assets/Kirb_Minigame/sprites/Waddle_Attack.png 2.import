@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bce4g5p42l3hi"
-path="res://.godot/imported/desk.png-33defba2094595e1077f04c3df2d0751.ctex"
+uid="uid://duxq7mrd2hn0t"
+path="res://.godot/imported/Waddle_Attack.png-f64096724409f15ccfd857be5c19e039.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Attorney_Minigame/images/desk.png"
-dest_files=["res://.godot/imported/desk.png-33defba2094595e1077f04c3df2d0751.ctex"]
+source_file="res://assets/Kirb_Minigame/sprites/Waddle_Attack.png"
+dest_files=["res://.godot/imported/Waddle_Attack.png-f64096724409f15ccfd857be5c19e039.ctex"]
 
 [params]
 

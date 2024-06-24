@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bfk4eedm8bk76"
-path="res://.godot/imported/ace_attorney_objection.wav-2b0c203f92edf9768cb4e8ff9d8e72c8.sample"
+path="res://.godot/imported/ace_attorney_objection.wav-5a466eeb6451e61183612746f18f9814.sample"
 
 [deps]
 
-source_file="res://assets/attorney_minigame/sounds/ace_attorney_objection.wav"
-dest_files=["res://.godot/imported/ace_attorney_objection.wav-2b0c203f92edf9768cb4e8ff9d8e72c8.sample"]
+source_file="res://assets/Attorney_Minigame/sounds/ace_attorney_objection.wav"
+dest_files=["res://.godot/imported/ace_attorney_objection.wav-5a466eeb6451e61183612746f18f9814.sample"]
 
 [params]
 

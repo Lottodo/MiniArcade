@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bce4g5p42l3hi"
-path="res://.godot/imported/desk.png-33defba2094595e1077f04c3df2d0751.ctex"
+uid="uid://b4od3q1oy6s05"
+path="res://.godot/imported/photo-output 2.png-f27f014de48503971c1e6d7515b2165a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Attorney_Minigame/images/desk.png"
-dest_files=["res://.godot/imported/desk.png-33defba2094595e1077f04c3df2d0751.ctex"]
+source_file="res://assets/Galaga_Minigame/Sprites/photo-output 2.png"
+dest_files=["res://.godot/imported/photo-output 2.png-f27f014de48503971c1e6d7515b2165a.ctex"]
 
 [params]
 

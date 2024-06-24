@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwb6codkardqn"
-path="res://.godot/imported/courtroom_background.png-398de8d590000d664dc21bfb509d4502.ctex"
+path="res://.godot/imported/courtroom_background.png-13c50f922bc21208c1ad07b449045e67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/attorney_minigame/images/courtroom_background.png"
-dest_files=["res://.godot/imported/courtroom_background.png-398de8d590000d664dc21bfb509d4502.ctex"]
+source_file="res://assets/Attorney_Minigame/images/courtroom_background.png"
+dest_files=["res://.godot/imported/courtroom_background.png-13c50f922bc21208c1ad07b449045e67.ctex"]
 
 [params]
 

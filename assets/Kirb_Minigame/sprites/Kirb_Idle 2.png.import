@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bce4g5p42l3hi"
-path="res://.godot/imported/desk.png-33defba2094595e1077f04c3df2d0751.ctex"
+uid="uid://8xf8sgstera2"
+path="res://.godot/imported/Kirb_Idle 2.png-ed8df4b15dbc24d920bd4fb1df6cc358.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Attorney_Minigame/images/desk.png"
-dest_files=["res://.godot/imported/desk.png-33defba2094595e1077f04c3df2d0751.ctex"]
+source_file="res://assets/Kirb_Minigame/sprites/Kirb_Idle 2.png"
+dest_files=["res://.godot/imported/Kirb_Idle 2.png-ed8df4b15dbc24d920bd4fb1df6cc358.ctex"]
 
 [params]
 

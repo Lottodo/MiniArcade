@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bce4g5p42l3hi"
-path="res://.godot/imported/desk.png-33defba2094595e1077f04c3df2d0751.ctex"
+uid="uid://cxg1y4j2bys2s"
+path="res://.godot/imported/Kirb_Attack.png-c6f6d866e9b5a998b82e0a204b142752.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Attorney_Minigame/images/desk.png"
-dest_files=["res://.godot/imported/desk.png-33defba2094595e1077f04c3df2d0751.ctex"]
+source_file="res://assets/Kirb_Minigame/sprites/Kirb_Attack.png"
+dest_files=["res://.godot/imported/Kirb_Attack.png-c6f6d866e9b5a998b82e0a204b142752.ctex"]
 
 [params]
 
