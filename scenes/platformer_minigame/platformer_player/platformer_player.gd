@@ -1,29 +1,67 @@
 extends CharacterBody2D
 
+@onready var anim_player = $AnimatedSprite2D
+@onready var asp = $AudioStreamPlayer
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_SPEED: float = 1000
+const GRAVITY: float = 3000.0
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+enum PLAYER_STATE {IDLE, RUN, FALL, JUMP, HURT, DRIFT}
 
+var current_state: PLAYER_STATE = PLAYER_STATE.IDLE
+var is_hurt: bool = false
 
 func _physics_process(delta):
 	# Add the gravity.
 	#if not is_on_floor():
-	#	velocity.y += gravity * delta
+	if not is_on_floor():
+		apply_gravity(delta)
 	
-	print(str(global_position.y))
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	if Input.is_action_just_pressed("action_A"):
+		velocity.y += -JUMP_SPEED
+	
+	calculate_state()
+	
 	move_and_slide()
+
+func apply_gravity(delta: float):
+	velocity.y += GRAVITY * delta
+
+func calculate_state():
+	if is_hurt:
+		set_state(PLAYER_STATE.HURT)
+	else:
+		if is_on_floor():
+			set_state(PLAYER_STATE.IDLE)
+		else:
+			if velocity.y > 0: #Caer
+				set_state(PLAYER_STATE.FALL)
+			else: #Salto
+				set_state(PLAYER_STATE.JUMP)
+
+func set_state(new_state: PLAYER_STATE):
+	if new_state != current_state:
+		if current_state == PLAYER_STATE.FALL and is_on_floor():
+			#SoundManager.play_clip(asp, SoundManager.SOUND_LAND)
+			anim_player.play("mario_land")
+		current_state = new_state
+		
+		match current_state:
+			PLAYER_STATE.IDLE:
+				anim_player.play("mario_idle")
+			PLAYER_STATE.FALL:
+				anim_player.play("mario_fall")
+			PLAYER_STATE.JUMP:
+				anim_player.play("mario_jump")
+				SoundManager.play_sound(asp, SoundManager.SOUND_PLAT_JUMP)
+			PLAYER_STATE.HURT:
+				anim_player.play("mario_hurt")
+				SoundManager.play_sound(asp, SoundManager.SOUND_PLAT_LOST1)
+
+func _on_bullet_area_entered(area):
+	is_hurt = true
+
+func on_proyectil_screen_exited():
+	print("Debug")

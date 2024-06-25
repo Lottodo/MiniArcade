@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://djlkk1co3fepy"]
+
+[ext_resource type="Script" path="res://scenes/platformer_minigame/platformer_fire_bullet/platformet_fire_bullet.gd" id="1_45qar"]
+[ext_resource type="Texture2D" uid="uid://bqf0i0urpk71v" path="res://assets/Platformer_Minigame/sprites/fire_bullet.png" id="1_th8iu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24d8c"]
+atlas = ExtResource("1_th8iu")
+region = Rect2(0, 0, 14, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50l2x"]
+atlas = ExtResource("1_th8iu")
+region = Rect2(0, 12, 14, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_diee0"]
+atlas = ExtResource("1_th8iu")
+region = Rect2(0, 24, 14, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvex1"]
+atlas = ExtResource("1_th8iu")
+region = Rect2(0, 36, 14, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yisxe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24d8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50l2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_diee0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvex1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ifldq"]
+radius = 7.0
+
+[node name="PlatformetFireBullet" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_45qar")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yisxe")
+frame_progress = 0.146442
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ifldq")
+debug_color = Color(0.996868, 0, 0.178101, 0.42)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]
