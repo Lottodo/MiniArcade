@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b03ui5vemmxx1"]
+[gd_scene load_steps=7 format=3 uid="uid://b03ui5vemmxx1"]
 
 [ext_resource type="Script" path="res://scenes/platformer_minigame/superstarsaga_lvl/superstarsaga_lvl.gd" id="1_i0wcr"]
 [ext_resource type="Texture2D" uid="uid://duvow4n4l30yw" path="res://assets/Platformer_Minigame/sprites/level_bg.png" id="2_htn8m"]
 [ext_resource type="PackedScene" uid="uid://ht85oaudteid" path="res://scenes/platformer_minigame/platformer_enemy/platformer_enemy.tscn" id="3_vyva5"]
 [ext_resource type="PackedScene" uid="uid://dvka8b2q08llj" path="res://scenes/platformer_minigame/platformer_player/platformer_player.tscn" id="4_njrgt"]
+[ext_resource type="Texture2D" uid="uid://bk5tof6wrp1vu" path="res://assets/Platformer_Minigame/sprites/player_shadow.png" id="5_xvgea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27dbt"]
 size = Vector2(84, 20)
@@ -14,9 +15,9 @@ script = ExtResource("1_i0wcr")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_top = -676.0
+offset_top = -730.0
 offset_right = 1152.0
-offset_bottom = 123.0
+offset_bottom = 69.0
 texture = ExtResource("2_htn8m")
 
 [node name="Camera2D" type="Camera2D" parent="TextureRect"]
@@ -25,15 +26,23 @@ limit_left = 0
 limit_bottom = 0
 
 [node name="PlatformerEnemy" parent="." instance=ExtResource("3_vyva5")]
-position = Vector2(946, -234)
+position = Vector2(946, -298)
 scale = Vector2(4.5, 4.5)
 
+[node name="PlayerShadow" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.368627)
+offset_left = 169.0
+offset_top = -224.0
+offset_right = 259.0
+offset_bottom = -209.0
+texture = ExtResource("5_xvgea")
+
 [node name="PlatformerPlayer" parent="." instance=ExtResource("4_njrgt")]
-position = Vector2(216, -216)
+position = Vector2(216, -280)
 scale = Vector2(4, 4)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(0, 10)
+position = Vector2(0, -65)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
