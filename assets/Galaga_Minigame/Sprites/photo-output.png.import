@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv7cvnh5numuv"
-path="res://.godot/imported/photo-output.png-5b4dace10df226f5b44beed5d478819b.ctex"
+path="res://.godot/imported/photo-output.png-29a1038d0b27bb04b26465f9f3b2c1e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Galaga_Minigame/Sprites/photo-output.png"
-dest_files=["res://.godot/imported/photo-output.png-5b4dace10df226f5b44beed5d478819b.ctex"]
+source_file="res://assets/Galaga_Minigame/sprites/photo-output.png"
+dest_files=["res://.godot/imported/photo-output.png-29a1038d0b27bb04b26465f9f3b2c1e5.ctex"]
 
 [params]
 

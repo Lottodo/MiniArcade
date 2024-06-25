@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dpud5lkvmotrr"]
+
+[ext_resource type="Script" path="res://scenes/kirb_minigame/kirby_player/kirby_player.gd" id="1_nqrju"]
+[ext_resource type="Texture2D" uid="uid://by7xbwvxpt57w" path="res://assets/Kirb_Minigame/sprites/Kirb_Idle.png" id="1_rx4tq"]
+[ext_resource type="Texture2D" uid="uid://d2f1pasw70euf" path="res://assets/Kirb_Minigame/sprites/Kirb_Attack.png" id="2_0rj2y"]
+[ext_resource type="Texture2D" uid="uid://8p7g3af1koda" path="res://assets/Kirb_Minigame/sprites/Kirb_Fail.png" id="3_6akqs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4w8qa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0rj2y")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6akqs")
+}],
+"loop": true,
+"name": &"Defeat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rx4tq")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n3h2j"]
+radius = 17.0294
+
+[node name="KirbyPlayer" type="CharacterBody2D"]
+script = ExtResource("1_nqrju")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4w8qa")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_n3h2j")

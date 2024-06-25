@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bpmsq5oeuh4mx"]
 
-[ext_resource type="Texture2D" uid="uid://dc28ayy8qo02g" path="res://assets/Platformer_Minigame/sprites/level_bg.png" id="1_1o3dm"]
+[ext_resource type="Texture2D" uid="uid://dev5vv1vb725q" path="res://assets/Platformer_Minigame/sprites/level_bg.png" id="1_1o3dm"]
 [ext_resource type="PackedScene" uid="uid://dvka8b2q08llj" path="res://scenes/platformer_minigame/platformer_player/platformer_player.tscn" id="2_kvmj2"]
 
 [node name="MarioluigiMinigame" type="Node2D"]
