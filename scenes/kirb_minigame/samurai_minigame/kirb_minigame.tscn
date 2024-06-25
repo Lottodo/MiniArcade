@@ -1,12 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://b2skuaea7m0k"]
 
-[ext_resource type="Texture2D" uid="uid://d0c3yeou7d6lb" path="res://assets/Kirb_Minigame/sprites/background.png" id="1_fbrff"]
+[ext_resource type="Texture2D" uid="uid://0rcalmjbj0h" path="res://assets/Kirb_Minigame/sprites/background.png" id="1_fbrff"]
 [ext_resource type="PackedScene" uid="uid://dpud5lkvmotrr" path="res://scenes/kirb_minigame/kirby_player/kirby_player.tscn" id="2_gip8j"]
 [ext_resource type="Texture2D" uid="uid://boc26sd71oewa" path="res://assets/Kirb_Minigame/sprites/Attention_Sprite.png" id="2_w4bqh"]
 [ext_resource type="PackedScene" uid="uid://cwfq625ghp2d8" path="res://scenes/kirb_minigame/waddle_enemy/waddle_enemy.tscn" id="3_40jkk"]
-
-[sub_resource type="Animation" id="Animation_w53w2"]
-resource_name = "attention_icon"
 
 [sub_resource type="Animation" id="Animation_vs6a6"]
 resource_name = "attention"
@@ -36,6 +33,9 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(102, -60), Vector2(106, -62), Vector2(102, -60), Vector2(97, -62), Vector2(102, -60), Vector2(106, -62), Vector2(102, -60)]
 }
+
+[sub_resource type="Animation" id="Animation_w53w2"]
+resource_name = "attention_icon"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cph01"]
 _data = {
