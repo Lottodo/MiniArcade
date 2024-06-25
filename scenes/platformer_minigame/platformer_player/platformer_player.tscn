@@ -1,10 +1,10 @@
 [gd_scene load_steps=25 format=3 uid="uid://dvka8b2q08llj"]
 
-[ext_resource type="Texture2D" uid="uid://del6ikptgdb4t" path="res://assets/Platformer_Minigame/sprites/mario_idle.png" id="1_ffc1q"]
+[ext_resource type="Texture2D" uid="uid://bvy4vf8ehxqgn" path="res://assets/Platformer_Minigame/sprites/mario_idle.png" id="1_ffc1q"]
 [ext_resource type="Script" path="res://scenes/platformer_minigame/platformer_player/platformer_player.gd" id="1_n3uhh"]
-[ext_resource type="Texture2D" uid="uid://cedr8jdskjufs" path="res://assets/Platformer_Minigame/sprites/mario_jump.png" id="1_tduu6"]
-[ext_resource type="Texture2D" uid="uid://dw54p14jtv7mv" path="res://assets/Platformer_Minigame/sprites/mario_win.png" id="3_4x0st"]
-[ext_resource type="Texture2D" uid="uid://63sysx7i830l" path="res://assets/Platformer_Minigame/sprites/mario_lost.png" id="3_qx7ht"]
+[ext_resource type="Texture2D" uid="uid://bo4flhd3tk82n" path="res://assets/Platformer_Minigame/sprites/mario_jump.png" id="1_tduu6"]
+[ext_resource type="Texture2D" uid="uid://ci4ptmueo2rys" path="res://assets/Platformer_Minigame/sprites/mario_win.png" id="3_4x0st"]
+[ext_resource type="Texture2D" uid="uid://dhmffrdmvn5d5" path="res://assets/Platformer_Minigame/sprites/mario_lost.png" id="3_qx7ht"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5do6n"]
 atlas = ExtResource("1_tduu6")
