@@ -1,5 +1,10 @@
 extends Control
 
+@onready var audio_player = $AudioStreamPlayer
+
+func _ready():
+	SoundManager.play_sound(audio_player, SoundManager.SOUND_MAIN_MENU)
+
 func _process(delta):
 	pass
 
