@@ -1,14 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://d2k08mbbochw0"]
+[gd_scene load_steps=17 format=3 uid="uid://d2k08mbbochw0"]
 
-[ext_resource type="Texture2D" uid="uid://cwb6codkardqn" path="res://assets/attorney_minigame/images/courtroom_background.png" id="2_ttqgh"]
-[ext_resource type="Texture2D" uid="uid://dgs0xhtuj1rc2" path="res://assets/attorney_minigame/images/phoenix_wright.png" id="3_rj2ee"]
-[ext_resource type="Texture2D" uid="uid://bce4g5p42l3hi" path="res://assets/attorney_minigame/images/desk.png" id="4_1r0gb"]
-[ext_resource type="Texture2D" uid="uid://bn2dkh68n88b4" path="res://assets/attorney_minigame/images/evidence_tab.png" id="5_vwinn"]
-[ext_resource type="Texture2D" uid="uid://bwy5bcdd7m0bi" path="res://assets/attorney_minigame/images/objection.png" id="6_irtvs"]
-[ext_resource type="AudioStream" uid="uid://bfk4eedm8bk76" path="res://assets/attorney_minigame/sounds/ace_attorney_objection.wav" id="7_7c5fv"]
-[ext_resource type="AudioStream" uid="uid://dtlwvxyfa5sq4" path="res://assets/attorney_minigame/sounds/ace_attorney_failure.wav" id="8_yncdq"]
-[ext_resource type="AudioStream" uid="uid://es7fvhxr3ol8" path="res://assets/attorney_minigame/sounds/ace_attorney_victory.wav" id="9_uqdt8"]
-[ext_resource type="AudioStream" uid="uid://b8r862hlvlwsk" path="res://assets/attorney_minigame/sounds/ace_attorney_thinking.wav" id="10_007uq"]
+[ext_resource type="Texture2D" uid="uid://cwb6codkardqn" path="res://assets/Attorney_Minigame/images/courtroom_background.png" id="2_ttqgh"]
+[ext_resource type="Texture2D" uid="uid://dgs0xhtuj1rc2" path="res://assets/Attorney_Minigame/images/phoenix_wright.png" id="3_rj2ee"]
+[ext_resource type="Texture2D" uid="uid://bce4g5p42l3hi" path="res://assets/Attorney_Minigame/images/desk.png" id="4_1r0gb"]
+[ext_resource type="Texture2D" uid="uid://bn2dkh68n88b4" path="res://assets/Attorney_Minigame/images/evidence_tab.png" id="5_vwinn"]
+[ext_resource type="Texture2D" uid="uid://b1g76p608pmj7" path="res://assets/Attorney_Minigame/images/evidence_hidden/0.png" id="6_3cvpa"]
+[ext_resource type="Texture2D" uid="uid://bwy5bcdd7m0bi" path="res://assets/Attorney_Minigame/images/objection.png" id="6_irtvs"]
 
 [sub_resource type="Animation" id="Animation_0sj2j"]
 length = 0.001
@@ -161,17 +158,17 @@ _data = {
 
 [node name="AceAttorneyMinigame" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3.43, 3.43)
-limit_left = 0
-limit_bottom = 0
-
-[node name="CourtroomBackground" type="Sprite2D" parent="."]
-position = Vector2(127, -93)
+[node name="CourtroomBackground" type="TextureRect" parent="."]
+offset_top = -336.0
+offset_right = 256.0
+offset_bottom = -144.0
+scale = Vector2(1.75, 1.75)
 texture = ExtResource("2_ttqgh")
+stretch_mode = 4
 
 [node name="PhoenixWright" type="Sprite2D" parent="."]
-position = Vector2(124, -101)
+position = Vector2(217, -176)
+scale = Vector2(1.75, 1.75)
 texture = ExtResource("3_rj2ee")
 hframes = 10
 
@@ -182,15 +179,17 @@ libraries = {
 autoplay = "idle"
 
 [node name="Desk" type="Sprite2D" parent="."]
-position = Vector2(103, -22)
+position = Vector2(180, -38)
+scale = Vector2(1.75, 1.75)
 texture = ExtResource("4_1r0gb")
 
 [node name="EvidenceTab" type="Sprite2D" parent="."]
-position = Vector2(275, -93)
+position = Vector2(489, -168)
+scale = Vector2(1.75, 1.75)
 texture = ExtResource("5_vwinn")
 
 [node name="Objection" type="Sprite2D" parent="."]
-position = Vector2(169, -93)
+position = Vector2(168, -96)
 texture = ExtResource("6_irtvs")
 hframes = 11
 
@@ -199,14 +198,13 @@ libraries = {
 "": SubResource("AnimationLibrary_rg4ch")
 }
 
-[node name="ObjectionAudioPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_7c5fv")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
-[node name="FailureAudioPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_yncdq")
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.93, 1.93)
+limit_left = 0
+limit_bottom = 0
 
-[node name="VictoryAudioPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_uqdt8")
-
-[node name="ThinkingAudioPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_007uq")
+[node name="EvidenceSilhouette" type="Sprite2D" parent="."]
+position = Vector2(311, -277)
+texture = ExtResource("6_3cvpa")
