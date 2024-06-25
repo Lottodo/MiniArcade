@@ -1,7 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://bpmsq5oeuh4mx"]
 
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://dc28ayy8qo02g" path="res://assets/Platformer_Minigame/sprites/level_bg.png" id="1_1o3dm"]
 [ext_resource type="Script" path="res://scenes/platformer_minigame/marioluigi_minigame/marioluigi_minigame.gd" id="1_2mnvx"]
+=======
+[ext_resource type="Texture2D" uid="uid://dev5vv1vb725q" path="res://assets/Platformer_Minigame/sprites/level_bg.png" id="1_1o3dm"]
+>>>>>>> ba0a322f9f2fce7a47803beecf87c642da350bd2
 [ext_resource type="PackedScene" uid="uid://dvka8b2q08llj" path="res://scenes/platformer_minigame/platformer_player/platformer_player.tscn" id="2_kvmj2"]
 [ext_resource type="Texture2D" uid="uid://nqtluiswu3cq" path="res://assets/Platformer_Minigame/sprites/player_shadow.png" id="3_swov5"]
 [ext_resource type="PackedScene" uid="uid://ht85oaudteid" path="res://scenes/platformer_minigame/platformer_enemy/platformer_enemy.tscn" id="4_6tnht"]

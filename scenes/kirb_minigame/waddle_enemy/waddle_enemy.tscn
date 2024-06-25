@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwfq625ghp2d8"]
+
+[ext_resource type="Texture2D" uid="uid://chnhkqe7ayei7" path="res://assets/Kirb_Minigame/sprites/Waddle_Idle.png" id="1_dr7q2"]
+[ext_resource type="Texture2D" uid="uid://dxfx2jlbief4y" path="res://assets/Kirb_Minigame/sprites/Waddle_Attack.png" id="1_eaaqj"]
+[ext_resource type="Texture2D" uid="uid://dj33goh6jo726" path="res://assets/Kirb_Minigame/sprites/Waddle_Fail.png" id="2_ep4n0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s2je8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_eaaqj")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ep4n0")
+}],
+"loop": true,
+"name": &"Defeat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dr7q2")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jgm02"]
+radius = 17.2627
+
+[node name="WaddleEnemy" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_s2je8")
+animation = &"Defeat"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jgm02")
