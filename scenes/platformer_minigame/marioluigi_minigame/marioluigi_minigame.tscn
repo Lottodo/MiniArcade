@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpmsq5oeuh4mx"]
+
+[ext_resource type="Texture2D" uid="uid://dc28ayy8qo02g" path="res://assets/Platformer_Minigame/sprites/level_bg.png" id="1_1o3dm"]
+[ext_resource type="PackedScene" uid="uid://dvka8b2q08llj" path="res://scenes/platformer_minigame/platformer_player/platformer_player.tscn" id="2_kvmj2"]
+
+[node name="MarioluigiMinigame" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -646.0
+offset_right = 1146.0
+offset_bottom = 118.0
+texture = ExtResource("1_1o3dm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_bottom = 0
+
+[node name="PlatformerPlayer" parent="." instance=ExtResource("2_kvmj2")]
+position = Vector2(411, -255)
+scale = Vector2(4.5, 4.5)

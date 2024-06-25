@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dgs0xhtuj1rc2" path="res://assets/Attorney_Minigame/images/phoenix_wright.png" id="3_rj2ee"]
 [ext_resource type="Texture2D" uid="uid://bce4g5p42l3hi" path="res://assets/Attorney_Minigame/images/desk.png" id="4_1r0gb"]
 [ext_resource type="Texture2D" uid="uid://bn2dkh68n88b4" path="res://assets/Attorney_Minigame/images/evidence_tab.png" id="5_vwinn"]
-[ext_resource type="Texture2D" uid="uid://bp3mjvqaq7qos" path="res://assets/Attorney_Minigame/images/evidence_hidden/0.png" id="6_3cvpa"]
+[ext_resource type="Texture2D" uid="uid://e6n4nxrl0v2u" path="res://assets/Attorney_Minigame/images/evidence_hidden/0.png" id="6_3cvpa"]
 [ext_resource type="Texture2D" uid="uid://bwy5bcdd7m0bi" path="res://assets/Attorney_Minigame/images/objection.png" id="6_irtvs"]
 
 [sub_resource type="Animation" id="Animation_0sj2j"]
