@@ -1,0 +1,102 @@
+[gd_scene load_steps=9 format=3 uid="uid://cko1tvls12rgs"]
+
+[ext_resource type="Texture2D" uid="uid://da4vh6d5l0oeq" path="res://assets/Mettool/NES - Mega Man 2 - Enemies.png" id="1_1s3w4"]
+[ext_resource type="Script" path="res://scenes/Mettool/Mettool.gd" id="1_ydyr0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_43uev"]
+size = Vector2(23, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwrt7"]
+size = Vector2(22, 18)
+
+[sub_resource type="Animation" id="Animation_i4pdd"]
+resource_name = "hide"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [2, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_hrlvi"]
+resource_name = "up"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_asm2y"]
+resource_name = "walk"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fd2hr"]
+_data = {
+"hide": SubResource("Animation_i4pdd"),
+"up": SubResource("Animation_hrlvi"),
+"walk": SubResource("Animation_asm2y")
+}
+
+[node name="Mettool" type="CharacterBody2D"]
+position = Vector2(3, -1)
+script = ExtResource("1_ydyr0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1s3w4")
+hframes = 4
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 8.5)
+shape = SubResource("RectangleShape2D_43uev")
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_wwrt7")
+debug_color = Color(0.981954, 0, 0.366513, 0.42)
+
+[node name="FloorDetection" type="RayCast2D" parent="."]
+position = Vector2(-6, 4)
+target_position = Vector2(0, 14)
+
+[node name="MettoolMove" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fd2hr")
+}
+autoplay = "walk"
+
+[node name="SoundEnemy" type="AudioStreamPlayer2D" parent="."]
+
+[node name="WallDetection" type="RayCast2D" parent="."]
+position = Vector2(-1, 2)
+target_position = Vector2(-14, 0)
