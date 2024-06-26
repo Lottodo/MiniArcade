@@ -16,8 +16,7 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("action_B"):
-		SoundManager.play_sound(asp, SoundManager.SOUND_PLAT_ENEMY_CHARGE)
-		anim_player.play("pre_attack")
+		print("waos")
 	
 
 func _on_animated_sprite_2d_animation_finished():
@@ -40,3 +39,8 @@ func spawn_item():
 	new_item.scale *= 4
 
 
+
+
+func _on_attack_timer_timeout():
+	SoundManager.play_sound(asp, SoundManager.SOUND_PLAT_ENEMY_CHARGE)
+	anim_player.play("pre_attack")

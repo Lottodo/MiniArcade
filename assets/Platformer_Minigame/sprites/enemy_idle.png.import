@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4od3q1oy6s05"
-path="res://.godot/imported/photo-output 2.png-f27f014de48503971c1e6d7515b2165a.ctex"
+uid="uid://dkbem3vu4olvv"
+path="res://.godot/imported/enemy_idle.png-816c52785b26c0fa8a413ccea674b2b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Galaga_Minigame/Sprites/photo-output 2.png"
-dest_files=["res://.godot/imported/photo-output 2.png-f27f014de48503971c1e6d7515b2165a.ctex"]
+source_file="res://assets/Platformer_Minigame/sprites/enemy_idle.png"
+dest_files=["res://.godot/imported/enemy_idle.png-816c52785b26c0fa8a413ccea674b2b5.ctex"]
 
 [params]
 

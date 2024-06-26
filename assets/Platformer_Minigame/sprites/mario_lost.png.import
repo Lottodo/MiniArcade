@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4od3q1oy6s05"
-path="res://.godot/imported/photo-output 2.png-f27f014de48503971c1e6d7515b2165a.ctex"
+uid="uid://dslgajt0b3nhg"
+path="res://.godot/imported/mario_lost.png-e61e0d3ff8bb5c038321098219146ed4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Galaga_Minigame/Sprites/photo-output 2.png"
-dest_files=["res://.godot/imported/photo-output 2.png-f27f014de48503971c1e6d7515b2165a.ctex"]
+source_file="res://assets/Platformer_Minigame/sprites/mario_lost.png"
+dest_files=["res://.godot/imported/mario_lost.png-e61e0d3ff8bb5c038321098219146ed4.ctex"]
 
 [params]
 

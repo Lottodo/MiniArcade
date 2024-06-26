@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bjxs7o0hc3taq"]
 
 [ext_resource type="Script" path="res://scenes/main_menu/main_menu.gd" id="1_5rfbg"]
-[ext_resource type="Texture2D" uid="uid://bydqngutwhuod" path="res://assets/Main_Menu/images/main_menu_background.jpeg" id="1_xwnc3"]
+[ext_resource type="Texture2D" uid="uid://cqrpio41rg1cb" path="res://assets/Main_Menu/images/main_menu_background.jpeg" id="2_e3l4n"]
 [ext_resource type="LabelSettings" uid="uid://bgqmxw6ko7un8" path="res://resources/fonts/RG_38_White.tres" id="2_k1bnx"]
-[ext_resource type="Texture2D" uid="uid://7i7odiqxyrrs" path="res://assets/Main_Menu/images/arcade_cabinet.png" id="4_hw0fh"]
+[ext_resource type="Texture2D" uid="uid://ejk5r5jsb1es" path="res://assets/Main_Menu/images/arcade_cabinet.png" id="4_te6lh"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -18,7 +18,7 @@ script = ExtResource("1_5rfbg")
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 649.0
-texture = ExtResource("1_xwnc3")
+texture = ExtResource("2_e3l4n")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -55,7 +55,7 @@ offset_left = 840.0
 offset_top = 271.0
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("4_hw0fh")
+texture = ExtResource("4_te6lh")
 expand_mode = 4
 flip_h = true
 
@@ -65,7 +65,7 @@ offset_left = 1.0
 offset_top = 272.0
 offset_right = 313.0
 offset_bottom = 649.0
-texture = ExtResource("4_hw0fh")
+texture = ExtResource("4_te6lh")
 expand_mode = 4
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

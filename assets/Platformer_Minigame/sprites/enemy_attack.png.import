@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4od3q1oy6s05"
-path="res://.godot/imported/photo-output 2.png-f27f014de48503971c1e6d7515b2165a.ctex"
+uid="uid://b4ukjadjfr2dn"
+path="res://.godot/imported/enemy_attack.png-b872bcb4f9b6a6484e16d24564374e8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Galaga_Minigame/Sprites/photo-output 2.png"
-dest_files=["res://.godot/imported/photo-output 2.png-f27f014de48503971c1e6d7515b2165a.ctex"]
+source_file="res://assets/Platformer_Minigame/sprites/enemy_attack.png"
+dest_files=["res://.godot/imported/enemy_attack.png-b872bcb4f9b6a6484e16d24564374e8b.ctex"]
 
 [params]
 

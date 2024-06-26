@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4od3q1oy6s05"
-path="res://.godot/imported/photo-output 2.png-f27f014de48503971c1e6d7515b2165a.ctex"
+uid="uid://bnq8gwuev2x13"
+path="res://.godot/imported/background.png-2d84e76d5ad193851f1c8acc64017a04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Galaga_Minigame/Sprites/photo-output 2.png"
-dest_files=["res://.godot/imported/photo-output 2.png-f27f014de48503971c1e6d7515b2165a.ctex"]
+source_file="res://assets/Kirb_Minigame/sprites/background.png"
+dest_files=["res://.godot/imported/background.png-2d84e76d5ad193851f1c8acc64017a04.ctex"]
 
 [params]
 
