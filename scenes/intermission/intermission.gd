@@ -11,7 +11,7 @@ func _ready():
 
 func select_minigame():
 	var min_value = 0
-	var max_value = 1
+	var max_value = 2
 	while true:
 		#Elije minijuego de forma aleatoria
 		minigame_id = randi() % (max_value - min_value + 1) + min_value
