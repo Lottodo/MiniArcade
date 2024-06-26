@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 GameManager="*res://singletons/GameManager.gd"
 SignalManager="*res://singletons/SignalManager.gd"
 SoundManager="*res://singletons/SoundManager.gd"
+ImageManager="*res://singletons/ImageManager.gd"
+
+[display]
+
+window/size/resizable=false
 
 [file_customization]
 
