@@ -9,7 +9,7 @@ var time: float
 
 func _ready():
 	var min_value = 1.0
-	var max_value = 1.5
+	var max_value = 1.4
 	#speed *= randf_range(min_value, max_value)
 	sprite.flip_h = true
 
