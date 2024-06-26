@@ -6,8 +6,17 @@ extends Node2D
 @onready var audio_player = $AudioStreamPlayer
 @onready var wait_timer = $WaitingTimer
 @onready var action_timer = $ActionTimer
+@onready var penalty_mark = $PenaltyMark
+const SCORE : int = 1
+
+var player_react : bool = false
 
 func _ready():
+	SignalManager.on_minigame_lost.connect(on_minigame_lost)
+	SignalManager.on_minigame_won.connect(on_minigame_won)
+	SignalManager.on_samurai_attack.connect(on_samurai_attack)
+	SignalManager.on_player_reaction.connect(on_player_reaction)
+	SignalManager.on_kirby_got_penalized.connect(on_kirby_got_penalized)
 	SoundManager.play_sound(audio_player, SoundManager.SOUND_KIRBY_START)
 	var rng = RandomNumberGenerator.new()
 	wait_timer.wait_time = rng.randf_range(3.0,5.0)
@@ -18,7 +27,31 @@ func _on_waiting_timer_timeout():
 	attention_animation.play("attention")
 	SoundManager.play_sound(audio_player, SoundManager.SOUND_KIRBY_ALERT)
 	action_timer.start()
+	SignalManager.on_kirby_can_attack.emit()
 
 func _on_action_timer_timeout():
+	if !player_react:
+		SignalManager.on_kirby_hit.emit()
+		on_minigame_lost()
+	else:
+		on_minigame_won()
+
+func on_kirby_got_penalized():
+	penalty_mark.visible = true
+	SoundManager.play_sound(audio_player, SoundManager.SOUND_KIRBY_WRONG)
+
+func on_minigame_won():
+	#SignalManager.on_minigame_won.emit(SCORE)
+	print("Kirby Ganó!")
+
+func on_minigame_lost():
+	#SignalManager.on_minigame_lost.emit()
+	print("Kirby Perdió!")
+
+func on_player_reaction():
+	player_react = true
+
+func on_samurai_attack():
 	attention_animation.play("flash")
 	SoundManager.play_sound(audio_player, SoundManager.SOUND_KIRBY_BONK)
+	

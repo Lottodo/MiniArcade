@@ -18,6 +18,7 @@ const SOUND_PLAT_ENEMY_SHOT = "plat_enemy_shot"
 const SOUND_KIRBY_START = "kirby_start"
 const SOUND_KIRBY_ALERT = "kirby_alert"
 const SOUND_KIRBY_BONK = "kirby_bonk"
+const SOUND_KIRBY_WRONG = "kirby_wrong"
 
 var SOUNDS = {
 	SOUND_MAIN_MENU : preload("res://assets/Main_Menu/sound/menu_theme.wav"),
@@ -38,6 +39,7 @@ var SOUNDS = {
 	SOUND_KIRBY_START : preload("res://assets/Kirb_Minigame/sounds/Samurai_Kirby_Intro.mp3"),
 	SOUND_KIRBY_ALERT : preload("res://assets/Kirb_Minigame/sounds/Attention_Sound.wav"),
 	SOUND_KIRBY_BONK : preload("res://assets/Kirb_Minigame/sounds/Bonk.wav"),
+	SOUND_KIRBY_WRONG : preload("res://assets/Kirb_Minigame/sounds/Wrong.wav"),
 }
 
 func play_sound(audio_player: AudioStreamPlayer, sound: String):
