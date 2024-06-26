@@ -149,7 +149,7 @@ func _on_after_objection_timer_timeout():
 		phoenix_fails()
 
 func _on_game_duration_timer_timeout():
-	if not has_player_won:
+	if not has_player_won and not ending_timer.is_stopped():
 		SignalManager.on_minigame_lost.emit()
 		GameManager.load_intermission_scene()
 
