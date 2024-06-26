@@ -2,6 +2,10 @@ extends Node
 
 const SOUND_MAIN_MENU = "main_menu_theme"
 const SOUND_ATTORNEY_MUSIC = "attorney_questioning_allegro_2001"
+#Sonidos Intermission
+const SOUND_INTER_TRANS = "intermission_transition"
+const SOUND_INTER_WIN = "intermission_win"
+const SOUND_INTER_LOST = "intermission_lost"
 #Sonidos Attorney
 const SOUND_ATTORNEY_OBJECTION = "attorney_objection"
 const SOUND_ATTORNEY_FAILURE = "attorney_failure"
@@ -23,8 +27,12 @@ const SOUND_KIRBY_WRONG = "kirby_wrong"
 
 var SOUNDS = {
 	SOUND_MAIN_MENU : preload("res://assets/Main_Menu/sound/menu_theme.wav"),
-	SOUND_ATTORNEY_MUSIC : preload("res://assets/Attorney_Minigame/music/ace_attorney_questioning_allegro_2001.wav"),
+	#Sonidos Intermission
+	SOUND_INTER_TRANS : preload("res://assets/intermission/sounds/lvl_transition.wav"),
+	SOUND_INTER_WIN : preload("res://assets/intermission/sounds/lvl_transition.wav"),
+	SOUND_INTER_LOST : preload("res://assets/intermission/sounds/lvl_transition.wav"),
 	#Sonidos Attorney
+	SOUND_ATTORNEY_MUSIC : preload("res://assets/Attorney_Minigame/music/ace_attorney_questioning_allegro_2001.wav"),
 	SOUND_ATTORNEY_OBJECTION : preload("res://assets/Attorney_Minigame/sounds/ace_attorney_objection.wav"),
 	SOUND_ATTORNEY_FAILURE : preload("res://assets/Attorney_Minigame/sounds/ace_attorney_failure.wav"),
 	SOUND_ATTORNEY_SELECT : preload("res://assets/Attorney_Minigame/sounds/ace_attorney_select.wav"),

@@ -38,4 +38,8 @@ func _on_screen_exited():
 
 
 func _on_ending_timer_timeout():
-	SignalManager.platformer_on_game_end.emit()
+	SignalManager.platformer_on_bullet_out.emit()
+
+
+func _on_body_entered(body):
+	SignalManager.platformer_on_damage.emit()

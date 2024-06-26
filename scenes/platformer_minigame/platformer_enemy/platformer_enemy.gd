@@ -14,12 +14,6 @@ enum ENEMY_STATE {IDLE, PREATTACK, POSTATTACK}
 func _ready():
 	anim_player.connect("animation_finished", Callable(self, "_on_animation_finished"))
 
-func _process(delta):
-	if Input.is_action_just_pressed("action_B"):
-		SoundManager.play_sound(asp, SoundManager.SOUND_PLAT_ENEMY_CHARGE)
-		anim_player.play("pre_attack")
-	
-
 func _on_animated_sprite_2d_animation_finished():
 	var current_animation = anim_player.animation
 	if current_animation == "pre_attack":
@@ -39,4 +33,6 @@ func spawn_item():
 	new_item.global_position = item_position
 	new_item.scale *= 4
 
-
+func _on_attack_timer_timeout():
+	SoundManager.play_sound(asp, SoundManager.SOUND_PLAT_ENEMY_CHARGE)
+	anim_player.play("pre_attack")

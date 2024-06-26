@@ -1,7 +1,6 @@
 extends Node
 
-signal platformer_on_damage()
-signal platformer_on_game_end()
+
 ###############################################
 # 			Señales de uso generico           #
 ###############################################
@@ -25,3 +24,7 @@ signal on_player_reaction()
 # Ace Attorney
 signal on_correct_evidence()
 signal on_wrong_evidence()
+
+#Plataformero
+signal platformer_on_damage()
+signal platformer_on_bullet_out()
