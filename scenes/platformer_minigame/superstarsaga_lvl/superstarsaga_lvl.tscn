@@ -113,6 +113,6 @@ position = Vector2(330, -450)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_ie2dk")
 autoplay = "default"
-frame_progress = 0.942506
+frame_progress = 0.416913
 
 [connection signal="timeout" from="EndingTimer" to="." method="_on_ending_timer_timeout"]

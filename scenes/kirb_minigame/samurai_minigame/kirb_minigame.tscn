@@ -146,5 +146,9 @@ one_shot = true
 [node name="ActionTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="EndingTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="WaitingTimer" to="." method="_on_waiting_timer_timeout"]
 [connection signal="timeout" from="ActionTimer" to="." method="_on_action_timer_timeout"]
+[connection signal="timeout" from="EndingTimer" to="." method="_on_ending_timer_timeout"]

@@ -2,6 +2,8 @@ extends Node
 
 var global_lives : int = 4
 var global_score : int = 0
+var global_first_last_game_id: int = -1
+var global_second_last_game_id: int = 1
 
 ###############################################
 # 			Control de Escenas                #
@@ -10,6 +12,7 @@ var main_menu_scene : PackedScene = preload("res://scenes/main_menu/main_menu.ts
 var intermission_scene : PackedScene = preload("res://scenes/intermission/intermission.tscn")
 var kirby_scene : PackedScene = preload("res://scenes/kirb_minigame/samurai_minigame/kirb_minigame.tscn")
 var platformer_scene : PackedScene = preload("res://scenes/platformer_minigame/superstarsaga_lvl/superstarsaga_lvl.tscn")
+var attorney_scene : PackedScene = preload("res://scenes/attorney_minigame/ace_attorney_minigame.tscn")
 
 ###############################################
 #				Funcion Ready				  #
@@ -32,6 +35,9 @@ func load_kirby_scene():
 
 func load_platformer_scene():
 	get_tree().change_scene_to_packed(platformer_scene)
+
+func load_attorney_scene():
+	get_tree().change_scene_to_packed(attorney_scene)
 
 ###############################################
 # 			Funciones Generales               #

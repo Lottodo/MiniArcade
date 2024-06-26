@@ -265,6 +265,10 @@ wait_time = 5.0
 one_shot = true
 autostart = true
 
+[node name="EndingTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
 [connection signal="pressed" from="Evidence1" to="." method="_on_evidence_1_pressed"]
 [connection signal="pressed" from="Evidence2" to="." method="_on_evidence_2_pressed"]
 [connection signal="pressed" from="Evidence3" to="." method="_on_evidence_3_pressed"]
@@ -272,3 +276,4 @@ autostart = true
 [connection signal="timeout" from="InitialWaitTimer" to="." method="_on_initial_wait_timer_timeout"]
 [connection signal="timeout" from="AfterObjectionTimer" to="." method="_on_after_objection_timer_timeout"]
 [connection signal="timeout" from="GameDurationTimer" to="." method="_on_game_duration_timer_timeout"]
+[connection signal="timeout" from="EndingTimer" to="." method="_on_ending_timer_timeout"]

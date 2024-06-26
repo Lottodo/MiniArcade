@@ -7,9 +7,11 @@ extends Node2D
 @onready var wait_timer = $WaitingTimer
 @onready var action_timer = $ActionTimer
 @onready var penalty_mark = $PenaltyMark
+@onready var ending_timer = $EndingTimer
 const SCORE : int = 1
 
 var player_react : bool = false
+var player_lost : bool = false
 
 func _ready():
 	SignalManager.on_minigame_lost.connect(on_minigame_lost)
@@ -41,12 +43,12 @@ func on_kirby_got_penalized():
 	SoundManager.play_sound(audio_player, SoundManager.SOUND_KIRBY_WRONG)
 
 func on_minigame_won():
-	#SignalManager.on_minigame_won.emit(SCORE)
 	print("Kirby Ganó!")
+	ending_timer.start()
 
 func on_minigame_lost():
-	#SignalManager.on_minigame_lost.emit()
 	print("Kirby Perdió!")
+	ending_timer.start()
 
 func on_player_reaction():
 	player_react = true
@@ -55,3 +57,13 @@ func on_samurai_attack():
 	attention_animation.play("flash")
 	SoundManager.play_sound(audio_player, SoundManager.SOUND_KIRBY_BONK)
 	
+
+func on_scene_change():
+	GameManager.load_intermission_scene()
+
+func _on_ending_timer_timeout():
+	if player_lost:
+		SignalManager.on_minigame_lost.emit()
+	else:
+		SignalManager.on_minigame_won.emit(SCORE)
+	on_scene_change()
