@@ -1,15 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://b03ui5vemmxx1"]
 
 [ext_resource type="Script" path="res://scenes/platformer_minigame/superstarsaga_lvl/superstarsaga_lvl.gd" id="1_i0wcr"]
-[ext_resource type="Texture2D" uid="uid://ca5uqho7b7xje" path="res://assets/Platformer_Minigame/sprites/level_bg.png" id="2_htn8m"]
+[ext_resource type="Texture2D" uid="uid://duvow4n4l30yw" path="res://assets/Platformer_Minigame/sprites/level_bg.png" id="2_htn8m"]
 [ext_resource type="PackedScene" uid="uid://ht85oaudteid" path="res://scenes/platformer_minigame/platformer_enemy/platformer_enemy.tscn" id="3_vyva5"]
 [ext_resource type="PackedScene" uid="uid://dvka8b2q08llj" path="res://scenes/platformer_minigame/platformer_player/platformer_player.tscn" id="4_njrgt"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bk5tof6wrp1vu" path="res://assets/Platformer_Minigame/sprites/player_shadow.png" id="5_xvgea"]
 [ext_resource type="Texture2D" uid="uid://i7a4ebvxac5x" path="res://assets/Platformer_Minigame/sprites/a_button.png" id="6_nlcc0"]
-=======
-[ext_resource type="Texture2D" uid="uid://cainiix46ujvb" path="res://assets/Platformer_Minigame/sprites/player_shadow.png" id="5_xvgea"]
->>>>>>> 1525d0356869d7dbac81c22f69b58f38c43446cb
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27dbt"]
 size = Vector2(84, 20)
@@ -80,10 +76,6 @@ position = Vector2(-111, 672)
 limit_left = 0
 limit_bottom = 0
 
-[node name="PlatformerEnemy" parent="." instance=ExtResource("3_vyva5")]
-position = Vector2(946, -298)
-scale = Vector2(4.5, 4.5)
-
 [node name="PlayerShadow" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.368627)
 offset_left = 169.0
@@ -114,5 +106,9 @@ scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_ie2dk")
 autoplay = "default"
 frame_progress = 0.416913
+
+[node name="PlatformerEnemy" parent="." instance=ExtResource("3_vyva5")]
+position = Vector2(942, -296)
+scale = Vector2(4.5, 4.5)
 
 [connection signal="timeout" from="EndingTimer" to="." method="_on_ending_timer_timeout"]
