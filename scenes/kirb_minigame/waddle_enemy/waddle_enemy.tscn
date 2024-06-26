@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwfq625ghp2d8"]
+[gd_scene load_steps=7 format=3 uid="uid://cwfq625ghp2d8"]
 
 [ext_resource type="Texture2D" uid="uid://chnhkqe7ayei7" path="res://assets/Kirb_Minigame/sprites/Waddle_Idle.png" id="1_dr7q2"]
 [ext_resource type="Texture2D" uid="uid://dxfx2jlbief4y" path="res://assets/Kirb_Minigame/sprites/Waddle_Attack.png" id="1_eaaqj"]
+[ext_resource type="Script" path="res://scenes/kirb_minigame/waddle_enemy/waddle_enemy.gd" id="1_nn46a"]
 [ext_resource type="Texture2D" uid="uid://dj33goh6jo726" path="res://assets/Kirb_Minigame/sprites/Waddle_Fail.png" id="2_ep4n0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s2je8"]
@@ -35,6 +36,7 @@ animations = [{
 radius = 17.2627
 
 [node name="WaddleEnemy" type="CharacterBody2D"]
+script = ExtResource("1_nn46a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s2je8")
