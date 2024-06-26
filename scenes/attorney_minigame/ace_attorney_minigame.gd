@@ -21,6 +21,9 @@ extends Node2D
 @onready var after_objection_timer = $AfterObjectionTimer
 @onready var ending_timer = $EndingTimer
 
+# Progress bar
+@onready var progress_bar = $TextureProgressBar
+
 var correct_evidence : String
 var correct_evidence_index : int
 var evidence_names
@@ -29,6 +32,9 @@ var has_player_won : bool
 func _ready():
 	SoundManager.play_sound(attorney_music_player, SoundManager.SOUND_ATTORNEY_MUSIC)
 	initial_wait_timer.start() # When this ends, the evidence is shown so the player can choose
+
+func _process(delta):
+	update_progress_bar(delta)
 
 func set_random_evidence():
 	# Generate a correct evidence
@@ -63,12 +69,17 @@ func set_random_evidence():
 	for i in range(evidences.size()):
 		ImageManager.change_image(evidences[i], evidence_names[i])
 
+# Progress bar update function
+func update_progress_bar(delta):
+	progress_bar.ratio = game_duration_timer.time_left/game_duration_timer.wait_time
+
 # Phoenix Wright actions
 func phoenix_objects():
 	phoenix_animation_player.play("pointing")
 	objection_animation_player.play("objection!")
 	SoundManager.play_sound(attorney_sound_player, SoundManager.SOUND_ATTORNEY_OBJECTION)
 	after_objection_timer.start()
+	progress_bar.visible = false
 
 func phoenix_fails():
 	phoenix_animation_player.play("failure")
@@ -138,14 +149,9 @@ func _on_after_objection_timer_timeout():
 		phoenix_fails()
 
 func _on_game_duration_timer_timeout():
-	print("Game ended!")
-	"""
-	Carlos/Lottie:
-	Supongo que falta implementar que se termine si no se selecciona algun objeto a tiempo
-	La forma que implemente para que haga transicion es que se inicie el ending_timer,
-	como se mira en la funcion phoenix_wins() y phoenix_fails(), no quisiera meterme mucho (mas)
-	con codigo ajeno, so, asi queda pa que se devuelva solito a la escena de intermision
-	"""
+	if not has_player_won:
+		SignalManager.on_minigame_lost.emit()
+		GameManager.load_intermission_scene()
 
 
 func _on_ending_timer_timeout():
