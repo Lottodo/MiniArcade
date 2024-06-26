@@ -13,9 +13,15 @@ signal on_score_update(score : int)
 ###############################################
 # 		Señales exclusivas de minijuego 	  #
 ###############################################
+
+# Kirby
 signal on_kirby_hit()
 signal on_waddle_hit()
 signal on_kirby_can_attack()
 signal on_kirby_got_penalized()
 signal on_samurai_attack()
 signal on_player_reaction()
+
+# Ace Attorney
+signal on_correct_evidence()
+signal on_wrong_evidence()

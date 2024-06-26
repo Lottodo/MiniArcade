@@ -1,6 +1,7 @@
 extends Node
 
 const SOUND_MAIN_MENU = "main_menu_theme"
+const SOUND_ATTORNEY_MUSIC = "attorney_questioning_allegro_2001"
 #Sonidos Attorney
 const SOUND_ATTORNEY_OBJECTION = "attorney_objection"
 const SOUND_ATTORNEY_FAILURE = "attorney_failure"
@@ -22,6 +23,7 @@ const SOUND_KIRBY_WRONG = "kirby_wrong"
 
 var SOUNDS = {
 	SOUND_MAIN_MENU : preload("res://assets/Main_Menu/sound/menu_theme.wav"),
+	SOUND_ATTORNEY_MUSIC : preload("res://assets/Attorney_Minigame/music/ace_attorney_questioning_allegro_2001.wav"),
 	#Sonidos Attorney
 	SOUND_ATTORNEY_OBJECTION : preload("res://assets/Attorney_Minigame/sounds/ace_attorney_objection.wav"),
 	SOUND_ATTORNEY_FAILURE : preload("res://assets/Attorney_Minigame/sounds/ace_attorney_failure.wav"),

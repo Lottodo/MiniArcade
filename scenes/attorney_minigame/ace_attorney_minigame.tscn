@@ -1,13 +1,13 @@
 [gd_scene load_steps=19 format=3 uid="uid://uw6o6obk6cfx"]
 
 [ext_resource type="Script" path="res://scenes/attorney_minigame/ace_attorney_minigame.gd" id="1_0gc1n"]
-[ext_resource type="Texture2D" uid="uid://cwb6codkardqn" path="res://assets/Attorney_Minigame/images/courtroom_background.png" id="2_ttqgh"]
-[ext_resource type="Texture2D" uid="uid://dgs0xhtuj1rc2" path="res://assets/Attorney_Minigame/images/phoenix_wright.png" id="3_rj2ee"]
-[ext_resource type="Texture2D" uid="uid://bce4g5p42l3hi" path="res://assets/Attorney_Minigame/images/desk.png" id="4_1r0gb"]
-[ext_resource type="Texture2D" uid="uid://bn2dkh68n88b4" path="res://assets/Attorney_Minigame/images/evidence_tab.png" id="5_vwinn"]
-[ext_resource type="Texture2D" uid="uid://b1g76p608pmj7" path="res://assets/Attorney_Minigame/images/evidence_hidden/0.png" id="6_3cvpa"]
-[ext_resource type="Texture2D" uid="uid://bwy5bcdd7m0bi" path="res://assets/Attorney_Minigame/images/objection.png" id="6_irtvs"]
-[ext_resource type="Texture2D" uid="uid://kujw55p87qrr" path="res://assets/Attorney_Minigame/images/evidence_shown/0.png" id="7_debcu"]
+[ext_resource type="Texture2D" uid="uid://bdaqtsxa76vj" path="res://assets/Attorney_Minigame/images/courtroom_background.png" id="2_ttqgh"]
+[ext_resource type="Texture2D" uid="uid://deb2t3o30ah7y" path="res://assets/Attorney_Minigame/images/phoenix_wright.png" id="3_rj2ee"]
+[ext_resource type="Texture2D" uid="uid://br30d814mdlvu" path="res://assets/Attorney_Minigame/images/desk.png" id="4_1r0gb"]
+[ext_resource type="Texture2D" uid="uid://dmufoah38rhgk" path="res://assets/Attorney_Minigame/images/evidence_tab.png" id="5_vwinn"]
+[ext_resource type="Texture2D" uid="uid://b26gb1fi48wf2" path="res://assets/Attorney_Minigame/images/evidence_hidden/0.png" id="6_3cvpa"]
+[ext_resource type="Texture2D" uid="uid://bdh5vk8mw07nc" path="res://assets/Attorney_Minigame/images/objection.png" id="6_irtvs"]
+[ext_resource type="Texture2D" uid="uid://co3y01sc3krff" path="res://assets/Attorney_Minigame/images/evidence_shown/0.png" id="7_debcu"]
 
 [sub_resource type="Animation" id="Animation_0sj2j"]
 length = 0.001
@@ -191,22 +191,22 @@ position = Vector2(489, -168)
 scale = Vector2(1.75, 1.75)
 texture = ExtResource("5_vwinn")
 
-[node name="Objection" type="Sprite2D" parent="."]
-position = Vector2(168, -96)
-texture = ExtResource("6_irtvs")
-hframes = 11
+[node name="AttorneyMusicPlayer" type="AudioStreamPlayer" parent="."]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Objection"]
-libraries = {
-"": SubResource("AnimationLibrary_rg4ch")
-}
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AttorneySoundPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.93, 1.93)
 limit_left = 0
 limit_bottom = 0
+
+[node name="EvidenceSilhouette" type="TextureButton" parent="."]
+offset_left = 273.0
+offset_top = -311.0
+offset_right = 343.0
+offset_bottom = -241.0
+disabled = true
+texture_normal = ExtResource("6_3cvpa")
 
 [node name="Evidence1" type="TextureButton" parent="."]
 offset_left = 415.0
@@ -236,10 +236,33 @@ offset_right = 569.0
 offset_bottom = -66.0
 texture_normal = ExtResource("7_debcu")
 
-[node name="EvidenceSilhouette" type="TextureButton" parent="."]
-offset_left = 273.0
-offset_top = -311.0
-offset_right = 343.0
-offset_bottom = -241.0
-disabled = true
-texture_normal = ExtResource("6_3cvpa")
+[node name="Objection" type="Sprite2D" parent="."]
+position = Vector2(304.177, -168.5)
+scale = Vector2(1.75521, 1.75521)
+texture = ExtResource("6_irtvs")
+hframes = 11
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Objection"]
+libraries = {
+"": SubResource("AnimationLibrary_rg4ch")
+}
+
+[node name="InitialWaitTimer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[node name="AfterObjectionTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="GameDurationTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="Evidence1" to="." method="_on_evidence_1_pressed"]
+[connection signal="pressed" from="Evidence2" to="." method="_on_evidence_2_pressed"]
+[connection signal="pressed" from="Evidence3" to="." method="_on_evidence_3_pressed"]
+[connection signal="pressed" from="Evidence4" to="." method="_on_evidence_4_pressed"]
+[connection signal="timeout" from="InitialWaitTimer" to="." method="_on_initial_wait_timer_timeout"]
+[connection signal="timeout" from="AfterObjectionTimer" to="." method="_on_after_objection_timer_timeout"]
+[connection signal="timeout" from="GameDurationTimer" to="." method="_on_game_duration_timer_timeout"]
