@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://83joim0p82s3"
-path="res://.godot/imported/Run_Shoot.png-e03683ef63406bc3f0ccf649b750e194.ctex"
+path="res://.godot/imported/Run_Shoot.png-7253d619c39ff7e7dd8cf99601d47f35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Megaman/Run_Shoot.png"
-dest_files=["res://.godot/imported/Run_Shoot.png-e03683ef63406bc3f0ccf649b750e194.ctex"]
+source_file="res://assets/Megaman_Minigame/Megaman/Run_Shoot.png"
+dest_files=["res://.godot/imported/Run_Shoot.png-7253d619c39ff7e7dd8cf99601d47f35.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://da4vh6d5l0oeq"
-path="res://.godot/imported/NES - Mega Man 2 - Enemies.png-7c0b28e0492203c21e8dc23130561643.ctex"
+path="res://.godot/imported/NES - Mega Man 2 - Enemies.png-a7467c9c5d8ae8c58ea35cc310a3477d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mettool/NES - Mega Man 2 - Enemies.png"
-dest_files=["res://.godot/imported/NES - Mega Man 2 - Enemies.png-7c0b28e0492203c21e8dc23130561643.ctex"]
+source_file="res://assets/Megaman_Minigame/Mettool/NES - Mega Man 2 - Enemies.png"
+dest_files=["res://.godot/imported/NES - Mega Man 2 - Enemies.png-a7467c9c5d8ae8c58ea35cc310a3477d.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cpqmh0ouuaak7"
-path="res://.godot/imported/enemy_hit.wav-678f843e85152be3da86943cf523fd4e.sample"
+path="res://.godot/imported/enemy_hit.wav-f52d52dc1ae4ff8a418579ee2dacf154.sample"
 
 [deps]
 
-source_file="res://assets/sounds/enemy_hit.wav"
-dest_files=["res://.godot/imported/enemy_hit.wav-678f843e85152be3da86943cf523fd4e.sample"]
+source_file="res://assets/Megaman_Minigame/sounds/enemy_hit.wav"
+dest_files=["res://.godot/imported/enemy_hit.wav-f52d52dc1ae4ff8a418579ee2dacf154.sample"]
 
 [params]
 

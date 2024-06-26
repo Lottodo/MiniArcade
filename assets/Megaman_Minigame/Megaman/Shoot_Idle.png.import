@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crhipuwq5nlxr"
-path="res://.godot/imported/Shoot_Idle.png-6405ae90c09dd9dc92058121017381a1.ctex"
+path="res://.godot/imported/Shoot_Idle.png-67453760f2509d84e5638c06b4cb2467.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Megaman/Shoot_Idle.png"
-dest_files=["res://.godot/imported/Shoot_Idle.png-6405ae90c09dd9dc92058121017381a1.ctex"]
+source_file="res://assets/Megaman_Minigame/Megaman/Shoot_Idle.png"
+dest_files=["res://.godot/imported/Shoot_Idle.png-67453760f2509d84e5638c06b4cb2467.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cko1tvls12rgs"]
 
-[ext_resource type="Texture2D" uid="uid://da4vh6d5l0oeq" path="res://assets/Mettool/NES - Mega Man 2 - Enemies.png" id="1_1s3w4"]
-[ext_resource type="Script" path="res://scenes/Mettool/Mettool.gd" id="1_ydyr0"]
+[ext_resource type="Texture2D" uid="uid://da4vh6d5l0oeq" path="res://assets/Megaman_Minigame/Mettool/NES - Mega Man 2 - Enemies.png" id="1_1s3w4"]
+[ext_resource type="Script" path="res://scenes/megaman_minigame/Mettool/Mettool.gd" id="1_x0udd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_43uev"]
 size = Vector2(23, 5)
@@ -67,7 +67,7 @@ _data = {
 
 [node name="Mettool" type="CharacterBody2D"]
 position = Vector2(3, -1)
-script = ExtResource("1_ydyr0")
+script = ExtResource("1_x0udd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_1s3w4")

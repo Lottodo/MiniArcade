@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://csj1js5b2bgmi"
-path="res://.godot/imported/hit.wav-b122da9ae3f69dfbe7a6d1bf9e1b423e.sample"
+path="res://.godot/imported/hit.wav-fadb394308d9decef6b10b25f9ad9a07.sample"
 
 [deps]
 
-source_file="res://assets/sounds/hit.wav"
-dest_files=["res://.godot/imported/hit.wav-b122da9ae3f69dfbe7a6d1bf9e1b423e.sample"]
+source_file="res://assets/Megaman_Minigame/sounds/hit.wav"
+dest_files=["res://.godot/imported/hit.wav-fadb394308d9decef6b10b25f9ad9a07.sample"]
 
 [params]
 

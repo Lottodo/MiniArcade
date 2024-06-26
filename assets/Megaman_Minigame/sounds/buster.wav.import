@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bs38q5ugqpnwy"
-path="res://.godot/imported/buster.wav-0bc56b0ac00190b6755c1d13349c5b44.sample"
+path="res://.godot/imported/buster.wav-f71430fce79236622dd2c6a0fb28c056.sample"
 
 [deps]
 
-source_file="res://assets/sounds/buster.wav"
-dest_files=["res://.godot/imported/buster.wav-0bc56b0ac00190b6755c1d13349c5b44.sample"]
+source_file="res://assets/Megaman_Minigame/sounds/buster.wav"
+dest_files=["res://.godot/imported/buster.wav-f71430fce79236622dd2c6a0fb28c056.sample"]
 
 [params]
 
