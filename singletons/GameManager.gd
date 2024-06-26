@@ -2,6 +2,7 @@ extends Node
 
 var global_lives : int = 4
 var global_score : int = 0
+var global_last_game_won : bool
 var global_first_last_game_id: int = -1
 var global_second_last_game_id: int = 1
 
@@ -28,16 +29,21 @@ func load_main_menu_scene():
 	get_tree().change_scene_to_packed(main_menu_scene)
 
 func load_intermission_scene():
+	transition_scenes()
 	get_tree().change_scene_to_packed(intermission_scene)
 
 func load_kirby_scene():
 	get_tree().change_scene_to_packed(kirby_scene)
 
 func load_platformer_scene():
+	transition_scenes()
 	get_tree().change_scene_to_packed(platformer_scene)
 
 func load_attorney_scene():
 	get_tree().change_scene_to_packed(attorney_scene)
+
+func transition_scenes():
+	TransitionScreen.transition()
 
 ###############################################
 # 			Funciones Generales               #
@@ -45,10 +51,12 @@ func load_attorney_scene():
 
 func on_minigame_won(score: int):
 	global_score += score
+	global_last_game_won = true
 	SignalManager.on_score_update.emit(global_score)
 
 func on_minigame_lost():
 	global_lives -= 1
+	global_last_game_won = false
 	SignalManager.on_update_lives.emit(global_lives)
 
 ###############################################

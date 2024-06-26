@@ -48,6 +48,7 @@ func on_minigame_won():
 
 func on_minigame_lost():
 	print("Kirby Perdió!")
+	player_lost = true
 	ending_timer.start()
 
 func on_player_reaction():

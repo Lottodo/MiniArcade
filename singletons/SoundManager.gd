@@ -29,8 +29,8 @@ var SOUNDS = {
 	SOUND_MAIN_MENU : preload("res://assets/Main_Menu/sound/menu_theme.wav"),
 	#Sonidos Intermission
 	SOUND_INTER_TRANS : preload("res://assets/intermission/sounds/lvl_transition.wav"),
-	SOUND_INTER_WIN : preload("res://assets/intermission/sounds/lvl_transition.wav"),
-	SOUND_INTER_LOST : preload("res://assets/intermission/sounds/lvl_transition.wav"),
+	SOUND_INTER_WIN : preload("res://assets/intermission/sounds/lvl_win.wav"),
+	SOUND_INTER_LOST : preload("res://assets/intermission/sounds/lvl_lost.wav"),
 	#Sonidos Attorney
 	SOUND_ATTORNEY_MUSIC : preload("res://assets/Attorney_Minigame/music/ace_attorney_questioning_allegro_2001.wav"),
 	SOUND_ATTORNEY_OBJECTION : preload("res://assets/Attorney_Minigame/sounds/ace_attorney_objection.wav"),

@@ -29,6 +29,7 @@ limit_bottom = 0
 
 [node name="AudioStreamPlayerTrans" type="AudioStreamPlayer" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayerState" type="AudioStreamPlayer" parent="."]
 
 [connection signal="finished" from="AudioStreamPlayerTrans" to="." method="_on_audio_stream_player_transition_finished"]
+[connection signal="finished" from="AudioStreamPlayerState" to="." method="_on_audio_stream_player_state_finished"]

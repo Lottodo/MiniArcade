@@ -150,8 +150,8 @@ func _on_game_duration_timer_timeout():
 
 func _on_ending_timer_timeout():
 	if has_player_won:
-		SignalManager.on_minigame_lost.emit()
-	else:
 		SignalManager.on_minigame_won.emit(1)
+	else:
+		SignalManager.on_minigame_lost.emit()
 	
 	GameManager.load_intermission_scene()

@@ -21,6 +21,7 @@ GameManager="*res://singletons/GameManager.gd"
 SignalManager="*res://singletons/SignalManager.gd"
 SoundManager="*res://singletons/SoundManager.gd"
 ImageManager="*res://singletons/ImageManager.gd"
+TransitionScreen="*res://scenes/transition/transition_screen.tscn"
 
 [display]
 
