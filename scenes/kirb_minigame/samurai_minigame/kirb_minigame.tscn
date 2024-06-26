@@ -1,19 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://b2skuaea7m0k"]
 
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://0rcalmjbj0h" path="res://assets/Kirb_Minigame/sprites/background.png" id="1_fbrff"]
-=======
->>>>>>> 1525d0356869d7dbac81c22f69b58f38c43446cb
 [ext_resource type="Script" path="res://scenes/kirb_minigame/samurai_minigame/kirb_minigame.gd" id="1_un5dr"]
 [ext_resource type="PackedScene" uid="uid://dpud5lkvmotrr" path="res://scenes/kirb_minigame/kirby_player/kirby_player.tscn" id="2_gip8j"]
-[ext_resource type="Texture2D" uid="uid://bnq8gwuev2x13" path="res://assets/Kirb_Minigame/sprites/background.png" id="2_rkptu"]
-[ext_resource type="Texture2D" uid="uid://boc26sd71oewa" path="res://assets/Kirb_Minigame/sprites/Attention_Sprite.png" id="3_6wlgm"]
+[ext_resource type="Texture2D" uid="uid://boc26sd71oewa" path="res://assets/Kirb_Minigame/sprites/Attention_Sprite.png" id="2_w4bqh"]
 [ext_resource type="PackedScene" uid="uid://cwfq625ghp2d8" path="res://scenes/kirb_minigame/waddle_enemy/waddle_enemy.tscn" id="3_40jkk"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://c30c7o4qy332r" path="res://assets/Kirb_Minigame/sprites/X_Mark.png" id="6_jp2u1"]
-=======
-[ext_resource type="Texture2D" uid="uid://c5j3hfg03rj3t" path="res://assets/Kirb_Minigame/sprites/X_Mark.png" id="6_n5w32"]
->>>>>>> 1525d0356869d7dbac81c22f69b58f38c43446cb
 
 [sub_resource type="Animation" id="Animation_vs6a6"]
 resource_name = "attention"
@@ -89,7 +81,7 @@ anchor_bottom = 1.0
 offset_top = -222.0
 offset_right = 256.0
 grow_vertical = 0
-texture = ExtResource("2_rkptu")
+texture = ExtResource("1_fbrff")
 
 [node name="AttentionICon" type="TextureRect" parent="."]
 visible = false
@@ -97,7 +89,7 @@ offset_left = 102.0
 offset_top = -60.0
 offset_right = 150.0
 offset_bottom = -8.0
-texture = ExtResource("3_6wlgm")
+texture = ExtResource("2_w4bqh")
 
 [node name="KirbyPlayer" parent="." instance=ExtResource("2_gip8j")]
 position = Vector2(60, -78)
@@ -116,7 +108,7 @@ offset_right = 111.0
 offset_bottom = -67.0
 grow_vertical = 0
 scale = Vector2(-0.5, -0.5)
-texture = ExtResource("6_n5w32")
+texture = ExtResource("6_jp2u1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
