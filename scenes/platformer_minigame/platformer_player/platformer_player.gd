@@ -14,7 +14,7 @@ var is_hurt: bool = false
 var game_ended: bool = false
 
 func _ready():
-	SignalManager.platformer_on_game_end.connect(on_game_end)
+	SignalManager.platformer_on_bullet_out.connect(on_game_end)
 
 func _physics_process(delta):
 	# Add the gravity.

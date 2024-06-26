@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://csa08lwob1qdq"]
+[gd_scene load_steps=4 format=3 uid="uid://csa08lwob1qdq"]
+
+[ext_resource type="Texture2D" uid="uid://cgv3wohbtsf7d" path="res://assets/intermission/assets/arcade_bg.png" id="1_kgj87"]
+[ext_resource type="Texture2D" uid="uid://dcjamkhcsnlnh" path="res://assets/intermission/assets/arcade_screen.png" id="1_kk5e4"]
+[ext_resource type="Script" path="res://scenes/intermission/intermission.gd" id="1_rw8rm"]
 
 [node name="Intermission" type="Control"]
 layout_mode = 3
@@ -7,3 +11,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rw8rm")
+
+[node name="ArcadeBackgroundSprite" type="Sprite2D" parent="."]
+position = Vector2(580.465, -325.615)
+scale = Vector2(0.351439, 0.319689)
+texture = ExtResource("1_kgj87")
+
+[node name="ArcadeBordersSprite" type="Sprite2D" parent="."]
+position = Vector2(576, -324)
+scale = Vector2(0.384, 0.292155)
+texture = ExtResource("1_kk5e4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_bottom = 0
+
+[node name="AudioStreamPlayerTrans" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="finished" from="AudioStreamPlayerTrans" to="." method="_on_audio_stream_player_transition_finished"]

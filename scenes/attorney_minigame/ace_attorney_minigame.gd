@@ -19,6 +19,7 @@ extends Node2D
 @onready var initial_wait_timer = $InitialWaitTimer
 @onready var game_duration_timer = $GameDurationTimer
 @onready var after_objection_timer = $AfterObjectionTimer
+@onready var ending_timer = $EndingTimer
 
 var correct_evidence : String
 var correct_evidence_index : int
@@ -72,6 +73,7 @@ func phoenix_objects():
 func phoenix_fails():
 	phoenix_animation_player.play("failure")
 	SoundManager.play_sound(attorney_sound_player, SoundManager.SOUND_ATTORNEY_FAILURE)
+	ending_timer.start()
 
 func phoenix_thinks():
 	phoenix_animation_player.play("thinking")
@@ -80,6 +82,7 @@ func phoenix_thinks():
 func phoenix_wins():
 	phoenix_animation_player.play("victory")
 	SoundManager.play_sound(attorney_sound_player, SoundManager.SOUND_ATTORNEY_VICTORY)
+	ending_timer.start()
 
 # Evidence buttons signal functions
 func _on_evidence_1_pressed():
@@ -136,3 +139,19 @@ func _on_after_objection_timer_timeout():
 
 func _on_game_duration_timer_timeout():
 	print("Game ended!")
+	"""
+	Carlos/Lottie:
+	Supongo que falta implementar que se termine si no se selecciona algun objeto a tiempo
+	La forma que implemente para que haga transicion es que se inicie el ending_timer,
+	como se mira en la funcion phoenix_wins() y phoenix_fails(), no quisiera meterme mucho (mas)
+	con codigo ajeno, so, asi queda pa que se devuelva solito a la escena de intermision
+	"""
+
+
+func _on_ending_timer_timeout():
+	if has_player_won:
+		SignalManager.on_minigame_lost.emit()
+	else:
+		SignalManager.on_minigame_won.emit(1)
+	
+	GameManager.load_intermission_scene()
