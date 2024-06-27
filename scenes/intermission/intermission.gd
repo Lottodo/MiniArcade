@@ -30,6 +30,7 @@ func _ready():
 		score_label.text = "GAME OVER"
 		end_score_label.visible = true
 		game_over_label.visible = true
+		end_score_label.text = "Final Score: "+str(GameManager.global_score) 
 		SoundManager.play_sound(asps, SoundManager.SOUND_INTER_GAMEOVER)
 	else:
 		if GameManager.global_first_last_game_id == -1:
