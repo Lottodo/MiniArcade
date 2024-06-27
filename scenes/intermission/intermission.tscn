@@ -1,43 +1,267 @@
-[gd_scene load_steps=5 format=3 uid="uid://csa08lwob1qdq"]
+[gd_scene load_steps=30 format=3 uid="uid://csa08lwob1qdq"]
 
-[ext_resource type="Texture2D" uid="uid://cgv3wohbtsf7d" path="res://assets/intermission/assets/arcade_bg.png" id="1_kgj87"]
 [ext_resource type="Texture2D" uid="uid://dcjamkhcsnlnh" path="res://assets/intermission/assets/arcade_screen.png" id="1_kk5e4"]
 [ext_resource type="Script" path="res://scenes/intermission/intermission.gd" id="1_rw8rm"]
-[ext_resource type="SpriteFrames" uid="uid://cq1qwy3ib1mae" path="res://resources/animation/coin.tres" id="4_j4n7n"]
+[ext_resource type="Texture2D" uid="uid://cpd4n7mec5pyo" path="res://assets/intermission/assets/screen_bg.png" id="2_6233e"]
+[ext_resource type="Texture2D" uid="uid://m0bveqj7ahm" path="res://assets/intermission/assets/coin_destruction.png" id="3_ps03p"]
+[ext_resource type="Texture2D" uid="uid://d0va82rmkwamc" path="res://assets/intermission/assets/screen_lines.png" id="3_tv2v8"]
+[ext_resource type="LabelSettings" uid="uid://bq3d8itndhtsq" path="res://resources/fonts/RG_38_White_Score.tres" id="3_y41f2"]
+[ext_resource type="Texture2D" uid="uid://cdqo2ejkbst8u" path="res://assets/intermission/assets/coin_sheet.png" id="18_f7q1h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e287"]
+atlas = ExtResource("3_ps03p")
+region = Rect2(0, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sf035"]
+atlas = ExtResource("3_ps03p")
+region = Rect2(74, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qfln"]
+atlas = ExtResource("3_ps03p")
+region = Rect2(148, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qplrg"]
+atlas = ExtResource("3_ps03p")
+region = Rect2(222, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6e158"]
+atlas = ExtResource("3_ps03p")
+region = Rect2(296, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3xrr"]
+atlas = ExtResource("3_ps03p")
+region = Rect2(370, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei6f2"]
+atlas = ExtResource("3_ps03p")
+region = Rect2(444, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f2pm"]
+atlas = ExtResource("3_ps03p")
+region = Rect2(518, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcb8x"]
+atlas = ExtResource("18_f7q1h")
+region = Rect2(0, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7h4k"]
+atlas = ExtResource("18_f7q1h")
+region = Rect2(74, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nypdw"]
+atlas = ExtResource("18_f7q1h")
+region = Rect2(148, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atvmc"]
+atlas = ExtResource("18_f7q1h")
+region = Rect2(222, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opghd"]
+atlas = ExtResource("18_f7q1h")
+region = Rect2(296, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g07y2"]
+atlas = ExtResource("18_f7q1h")
+region = Rect2(370, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oovhj"]
+atlas = ExtResource("18_f7q1h")
+region = Rect2(444, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_muw34"]
+atlas = ExtResource("18_f7q1h")
+region = Rect2(518, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xbyj"]
+atlas = ExtResource("18_f7q1h")
+region = Rect2(592, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i5bp"]
+atlas = ExtResource("18_f7q1h")
+region = Rect2(666, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ib41j"]
+atlas = ExtResource("18_f7q1h")
+region = Rect2(740, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2xv1"]
+atlas = ExtResource("18_f7q1h")
+region = Rect2(814, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0il4n"]
+atlas = ExtResource("18_f7q1h")
+region = Rect2(888, 0, 74, 74)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vldv0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e287")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sf035")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qfln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qplrg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6e158")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3xrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei6f2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f2pm")
+}],
+"loop": true,
+"name": &"coin_destruction",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_kcb8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7h4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nypdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atvmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opghd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g07y2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oovhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_muw34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xbyj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0i5bp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ib41j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2xv1")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_0il4n")
+}],
+"loop": true,
+"name": &"coin_flip",
+"speed": 24.0
+}]
 
 [node name="Intermission" type="Control"]
 layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_rw8rm")
+
+[node name="ArcadeScreen" type="Sprite2D" parent="."]
+position = Vector2(-506, -285)
+scale = Vector2(0.387771, 0.297771)
+texture = ExtResource("2_6233e")
+centered = false
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -577.0
+offset_top = -41.0
+offset_right = 575.0
+offset_bottom = 112.0
+text = "X"
+label_settings = ExtResource("3_y41f2")
+horizontal_alignment = 1
+
+[node name="CoinsContainer" type="MarginContainer" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -37.0
+offset_top = -37.0
+offset_right = 37.0
+offset_bottom = 37.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_rw8rm")
 
-[node name="ArcadeBackgroundSprite" type="Sprite2D" parent="."]
-position = Vector2(580.465, -325.615)
-scale = Vector2(0.351439, 0.319689)
-texture = ExtResource("1_kgj87")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CoinsContainer"]
+position = Vector2(-280, -133)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_vldv0")
+animation = &"coin_flip"
+autoplay = "coin_flip"
+centered = false
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CoinsContainer"]
+position = Vector2(-127, -178)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_vldv0")
+animation = &"coin_flip"
+autoplay = "coin_flip"
+centered = false
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="CoinsContainer"]
+position = Vector2(85, -176)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_vldv0")
+animation = &"coin_flip"
+autoplay = "coin_flip"
+centered = false
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="CoinsContainer"]
+position = Vector2(261, -132)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_vldv0")
+animation = &"coin_flip"
+autoplay = "coin_flip"
+centered = false
+
+[node name="ArcadeScreenLines" type="Sprite2D" parent="."]
+position = Vector2(-576, -324)
+scale = Vector2(0.404779, 0.341412)
+texture = ExtResource("3_tv2v8")
+centered = false
 
 [node name="ArcadeBordersSprite" type="Sprite2D" parent="."]
-position = Vector2(576, -324)
+position = Vector2(-576, -324)
 scale = Vector2(0.384, 0.292155)
 texture = ExtResource("1_kk5e4")
+centered = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-3, 319)
 limit_left = 0
+limit_top = 0
 limit_bottom = 0
 
 [node name="AudioStreamPlayerTrans" type="AudioStreamPlayer" parent="."]
 
 [node name="AudioStreamPlayerState" type="AudioStreamPlayer" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(323, -467)
-scale = Vector2(1.48649, 1.48649)
-sprite_frames = ExtResource("4_j4n7n")
-autoplay = "default"
-frame_progress = 0.552461
 
 [connection signal="finished" from="AudioStreamPlayerTrans" to="." method="_on_audio_stream_player_transition_finished"]
 [connection signal="finished" from="AudioStreamPlayerState" to="." method="_on_audio_stream_player_state_finished"]

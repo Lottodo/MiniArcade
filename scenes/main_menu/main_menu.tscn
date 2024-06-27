@@ -1,15 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bjxs7o0hc3taq"]
+[gd_scene load_steps=5 format=3 uid="uid://bjxs7o0hc3taq"]
 
 [ext_resource type="Script" path="res://scenes/main_menu/main_menu.gd" id="1_5rfbg"]
-[ext_resource type="Texture2D" uid="uid://cqrpio41rg1cb" path="res://assets/Main_Menu/images/main_menu_background.jpeg" id="1_xwnc3"]
+[ext_resource type="Texture2D" uid="uid://cbyiouxw5ehm7" path="res://assets/Main_Menu/images/main_menu_background.jpeg" id="1_xwnc3"]
 [ext_resource type="LabelSettings" uid="uid://bgqmxw6ko7un8" path="res://resources/fonts/RG_38_White.tres" id="2_k1bnx"]
-[ext_resource type="Texture2D" uid="uid://ejk5r5jsb1es" path="res://assets/Main_Menu/images/arcade_cabinet.png" id="4_hw0fh"]
-[ext_resource type="Texture2D" uid="uid://4ey36l54e1gt" path="res://assets/Main_Menu/images/start_button.png" id="4_sy2ql"]
-[ext_resource type="Texture2D" uid="uid://xvhkwy2jmu8y" path="res://assets/Main_Menu/images/exit_button.png" id="5_4gymk"]
-[ext_resource type="Texture2D" uid="uid://127aik08tulk" path="res://assets/Main_Menu/images/start_button_pressed.png" id="5_lk5tf"]
-[ext_resource type="Texture2D" uid="uid://7agnxrvakf7u" path="res://assets/Main_Menu/images/start_button_hover.png" id="6_h3fxw"]
-[ext_resource type="Texture2D" uid="uid://gvobhh1t06fd" path="res://assets/Main_Menu/images/exit_button_pressed.png" id="8_2e1n2"]
-[ext_resource type="Texture2D" uid="uid://deid1d7g5g5t3" path="res://assets/Main_Menu/images/exit_button_hover.png" id="9_euwrd"]
+[ext_resource type="Texture2D" uid="uid://ck8ayr5dtl2jd" path="res://assets/Main_Menu/images/arcade_cabinet.png" id="4_hw0fh"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -46,22 +40,14 @@ layout_mode = 2
 text = "Mini Arcade"
 label_settings = ExtResource("2_k1bnx")
 
-[node name="ButtonsContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+text = "Start"
+icon_alignment = 1
 
-[node name="StartButton" type="TextureButton" parent="VBoxContainer/ButtonsContainer"]
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("4_sy2ql")
-texture_pressed = ExtResource("5_lk5tf")
-texture_hover = ExtResource("6_h3fxw")
-
-[node name="ExitButton" type="TextureButton" parent="VBoxContainer/ButtonsContainer"]
-layout_mode = 2
-texture_normal = ExtResource("5_4gymk")
-texture_pressed = ExtResource("8_2e1n2")
-texture_hover = ExtResource("9_euwrd")
+text = "Exit"
 
 [node name="Cabinet_1" type="TextureRect" parent="."]
 layout_mode = 0
@@ -84,5 +70,5 @@ expand_mode = 4
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
-[connection signal="pressed" from="VBoxContainer/ButtonsContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ButtonsContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

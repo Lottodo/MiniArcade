@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c48b5tuvijf8f"]
+
+[ext_resource type="SpriteFrames" uid="uid://cq1qwy3ib1mae" path="res://resources/animation/coin.tres" id="1_0rh4h"]
+
+[node name="Coin" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_0rh4h")
+autoplay = "default"
+frame_progress = 0.526712
