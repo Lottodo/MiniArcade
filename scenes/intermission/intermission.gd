@@ -5,21 +5,31 @@ extends Control
 @onready var camera = $Camera2D
 @onready var coins_container = $CoinsContainer
 @onready var score_label = $ScoreLabel
+@onready var end_score_label = $EndScoreLabel
+@onready var game_over_label = $GameOverLabel
 var minigame_id = 0
 
 var coins: Array
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(str(GameManager.global_lives))
 	coins = coins_container.get_children()
 	score_label.text = str(GameManager.global_score)
+	end_score_label.visible = false
+	game_over_label.visible = false
 	
-	if GameManager.global_first_last_game_id == -1:
-		SoundManager.play_sound(aspt, SoundManager.SOUND_INTER_TRANS)
+	if GameManager.global_lives == 0:
+		score_label.text = "GAME OVER"
+		end_score_label.visible = true
+		game_over_label.visible = true
+		SoundManager.play_sound(asps, SoundManager.SOUND_INTER_GAMEOVER)
 	else:
-		update_game_state()
-	
-	select_minigame()
+		if GameManager.global_first_last_game_id == -1:
+			SoundManager.play_sound(aspt, SoundManager.SOUND_INTER_TRANS)
+		else:
+			update_game_state()
+		select_minigame()
 
 func update_game_state():
 	update_coins()
@@ -29,7 +39,6 @@ func update_game_state():
 		SoundManager.play_sound(asps, SoundManager.SOUND_INTER_LOST)
 
 func update_coins():
-	var coins_not_visible = []
 	for coin_idx in range(coins.size()):
 		if coin_idx >= GameManager.global_lives:
 			coins[coin_idx].play("coin_destruction")

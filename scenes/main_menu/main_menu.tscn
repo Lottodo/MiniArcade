@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://cqrpio41rg1cb" path="res://assets/Main_Menu/images/main_menu_background.jpeg" id="1_xwnc3"]
 [ext_resource type="LabelSettings" uid="uid://bgqmxw6ko7un8" path="res://resources/fonts/RG_38_White.tres" id="2_k1bnx"]
 [ext_resource type="Texture2D" uid="uid://ejk5r5jsb1es" path="res://assets/Main_Menu/images/arcade_cabinet.png" id="4_hw0fh"]
-[ext_resource type="Texture2D" uid="uid://cnv6tldxu1iqf" path="res://assets/Main_Menu/images/start_button.png" id="4_nrkbk"]
-[ext_resource type="Texture2D" uid="uid://bm47ai50qskso" path="res://assets/Main_Menu/images/start_button_pressed.png" id="5_8302i"]
-[ext_resource type="Texture2D" uid="uid://bvgv6p01qsn02" path="res://assets/Main_Menu/images/start_button_hover.png" id="6_bdorc"]
-[ext_resource type="Texture2D" uid="uid://xasvdfehpifd" path="res://assets/Main_Menu/images/exit_button.png" id="7_ste53"]
-[ext_resource type="Texture2D" uid="uid://ceun0yukrx2rf" path="res://assets/Main_Menu/images/exit_button_pressed.png" id="8_raqnw"]
-[ext_resource type="Texture2D" uid="uid://cdikwpy3vl55i" path="res://assets/Main_Menu/images/exit_button_hover.png" id="9_65hxu"]
+[ext_resource type="Texture2D" uid="uid://bgo7pfqdm2fm0" path="res://assets/Main_Menu/images/start_button.png" id="4_nrkbk"]
+[ext_resource type="Texture2D" uid="uid://b567o4q78g03q" path="res://assets/Main_Menu/images/start_button_pressed.png" id="5_8302i"]
+[ext_resource type="Texture2D" uid="uid://ukqm0rr6dkvm" path="res://assets/Main_Menu/images/start_button_hover.png" id="6_bdorc"]
+[ext_resource type="Texture2D" uid="uid://j57arkk65f04" path="res://assets/Main_Menu/images/exit_button.png" id="7_ste53"]
+[ext_resource type="Texture2D" uid="uid://32uq3is01nyq" path="res://assets/Main_Menu/images/exit_button_pressed.png" id="8_raqnw"]
+[ext_resource type="Texture2D" uid="uid://b4ehmq2fmu0yg" path="res://assets/Main_Menu/images/exit_button_hover.png" id="9_65hxu"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
