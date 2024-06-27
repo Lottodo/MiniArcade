@@ -27,7 +27,8 @@ extends Node2D
 var correct_evidence : String
 var correct_evidence_index : int
 var evidence_names
-var has_player_won : bool
+var has_player_won : bool = false
+var has_player_choosed : bool = false
 
 func _ready():
 	SoundManager.play_sound(attorney_music_player, SoundManager.SOUND_ATTORNEY_MUSIC)
@@ -80,6 +81,7 @@ func phoenix_objects():
 	SoundManager.play_sound(attorney_sound_player, SoundManager.SOUND_ATTORNEY_OBJECTION)
 	after_objection_timer.start()
 	progress_bar.visible = false
+	has_player_choosed = true
 
 func phoenix_fails():
 	phoenix_animation_player.play("failure")
@@ -149,9 +151,9 @@ func _on_after_objection_timer_timeout():
 		phoenix_fails()
 
 func _on_game_duration_timer_timeout():
-	if not has_player_won and not ending_timer.is_stopped():
-		SignalManager.on_minigame_lost.emit()
-		GameManager.load_intermission_scene()
+	if not has_player_won and not has_player_choosed:
+		phoenix_fails()
+		disable_buttons()
 
 
 func _on_ending_timer_timeout():
