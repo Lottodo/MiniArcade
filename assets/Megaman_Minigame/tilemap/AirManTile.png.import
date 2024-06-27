@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chmobbedgh8r0"
-path="res://.godot/imported/NES - Mega Man 2 - Wood Man Stage.png-6e842122fc68e93d7933d96357db0657.ctex"
+uid="uid://bhsy5ckryehj5"
+path="res://.godot/imported/AirManTile.png-bc4a109e985ea0c73c9b5d74ebc39578.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Megaman_Minigame/tilemap/NES - Mega Man 2 - Wood Man Stage.png"
-dest_files=["res://.godot/imported/NES - Mega Man 2 - Wood Man Stage.png-6e842122fc68e93d7933d96357db0657.ctex"]
+source_file="res://assets/Megaman_Minigame/tilemap/AirManTile.png"
+dest_files=["res://.godot/imported/AirManTile.png-bc4a109e985ea0c73c9b5d74ebc39578.ctex"]
 
 [params]
 

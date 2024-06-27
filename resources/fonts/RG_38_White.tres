@@ -1,6 +1,6 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bgqmxw6ko7un8"]
 
-[ext_resource type="FontFile" uid="uid://c1s2r62fcgcti" path="res://assets/fonts/Retro Gaming.ttf" id="1_3ovpv"]
+[ext_resource type="FontFile" uid="uid://dxfeie8c3xuq7" path="res://assets/fonts/Retro Gaming.ttf" id="1_3ovpv"]
 
 [resource]
 font = ExtResource("1_3ovpv")

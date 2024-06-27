@@ -43,11 +43,9 @@ func on_kirby_got_penalized():
 	SoundManager.play_sound(audio_player, SoundManager.SOUND_KIRBY_WRONG)
 
 func on_minigame_won():
-	print("Kirby Ganó!")
 	ending_timer.start()
 
 func on_minigame_lost():
-	print("Kirby Perdió!")
 	player_lost = true
 	ending_timer.start()
 
