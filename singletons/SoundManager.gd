@@ -6,6 +6,7 @@ const SOUND_ATTORNEY_MUSIC = "attorney_questioning_allegro_2001"
 const SOUND_INTER_TRANS = "intermission_transition"
 const SOUND_INTER_WIN = "intermission_win"
 const SOUND_INTER_LOST = "intermission_lost"
+const SOUND_INTER_GAMEOVER = "intermission_gameover"
 #Sonidos Attorney
 const SOUND_ATTORNEY_OBJECTION = "attorney_objection"
 const SOUND_ATTORNEY_FAILURE = "attorney_failure"
@@ -31,6 +32,7 @@ var SOUNDS = {
 	SOUND_INTER_TRANS : preload("res://assets/intermission/sounds/lvl_transition.wav"),
 	SOUND_INTER_WIN : preload("res://assets/intermission/sounds/lvl_win.wav"),
 	SOUND_INTER_LOST : preload("res://assets/intermission/sounds/lvl_lost.wav"),
+	SOUND_INTER_GAMEOVER : preload("res://assets/intermission/sounds/gameover.wav"),
 	#Sonidos Attorney
 	SOUND_ATTORNEY_MUSIC : preload("res://assets/Attorney_Minigame/music/ace_attorney_questioning_allegro_2001.wav"),
 	SOUND_ATTORNEY_OBJECTION : preload("res://assets/Attorney_Minigame/sounds/ace_attorney_objection.wav"),

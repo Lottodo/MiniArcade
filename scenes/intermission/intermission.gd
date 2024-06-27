@@ -8,8 +8,12 @@ extends Control
 @onready var end_score_label = $EndScoreLabel
 @onready var game_over_label = $GameOverLabel
 var minigame_id = 0
-
+var gameover: bool = false
 var coins: Array
+
+func _process(delta):
+	if Input.is_action_just_pressed("action_A") and gameover:
+		GameManager.load_main_menu_scene()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,6 +24,9 @@ func _ready():
 	game_over_label.visible = false
 	
 	if GameManager.global_lives == 0:
+		gameover = true
+	
+	if gameover:
 		score_label.text = "GAME OVER"
 		end_score_label.visible = true
 		game_over_label.visible = true
@@ -71,4 +78,6 @@ func _on_audio_stream_player_transition_finished():
 
 
 func _on_audio_stream_player_state_finished():
-	SoundManager.play_sound(aspt, SoundManager.SOUND_INTER_TRANS)
+	if not gameover:
+		SoundManager.play_sound(aspt, SoundManager.SOUND_INTER_TRANS)
+
