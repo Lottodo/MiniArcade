@@ -188,7 +188,10 @@ texture = ExtResource("2_6233e")
 centered = false
 
 [node name="ScoreLabel" type="Label" parent="."]
+<<<<<<< Updated upstream
 layout_mode = 0
+=======
+>>>>>>> Stashed changes
 offset_left = -577.0
 offset_top = -41.0
 offset_right = 575.0
