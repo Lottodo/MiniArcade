@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var item: PackedScene
 
+@onready var asp = $AudioStreamPlayer
+
 const SPEED = 900.0
 var shoot_cd := false
 var can_move: bool = true
@@ -31,6 +33,7 @@ func _physics_process(_delta):
 	move_and_slide()
 
 func shoot():
+	SoundManager.play_sound(asp, SoundManager.SOUND_GALAGA_LASER)
 	var new_item = item.instantiate()
 	var item_position = Vector2(global_position.x, global_position.y)
 	get_parent().add_child(new_item)

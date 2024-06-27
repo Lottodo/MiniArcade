@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var sprite = $AnimatedSprite2D
+@onready var asp = $AudioStreamPlayer
 
 var SPEED = 1000
 var direction = 1
@@ -24,4 +25,5 @@ func die():
 func _on_area_entered(area):
 	SPEED = 0
 	sprite.play("explosion")
+	SoundManager.play_sound(asp, SoundManager.SOUND_GALAGA_EXPLOSION)
 	SignalManager.on_alien_destroyed.emit()

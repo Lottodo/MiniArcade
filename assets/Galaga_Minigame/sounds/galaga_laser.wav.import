@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bi702inr3fbv0"
-path="res://.godot/imported/laser_default.wav-d5ab1372ad1bb71d29067bbb8e5d8461.sample"
+path="res://.godot/imported/galaga_laser.wav-e1df743bc75a300851b55904fd5d0ee8.sample"
 
 [deps]
 
-source_file="res://assets/Galaga_Minigame/sounds/laser_default.wav"
-dest_files=["res://.godot/imported/laser_default.wav-d5ab1372ad1bb71d29067bbb8e5d8461.sample"]
+source_file="res://assets/Galaga_Minigame/sounds/galaga_laser.wav"
+dest_files=["res://.godot/imported/galaga_laser.wav-e1df743bc75a300851b55904fd5d0ee8.sample"]
 
 [params]
 

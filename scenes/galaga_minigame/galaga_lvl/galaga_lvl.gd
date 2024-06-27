@@ -3,7 +3,7 @@ extends Node2D
 @onready var ending_timer = $EndingTimer
 @onready var asp = $AudioStreamPlayer
 
-var player_lost: bool = false
+var player_lost: bool = true
 const SCORE: int = 1
 
 func _ready():
@@ -16,7 +16,7 @@ func _process(delta):
 	pass
 
 func on_player_lost():
-	player_lost = true
+	player_lost = false
 
 func ending_game():
 	ending_timer.start()

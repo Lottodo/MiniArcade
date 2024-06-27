@@ -52,7 +52,7 @@ func update_coins():
 
 func select_minigame():
 	var min_value = 0
-	var max_value = 2
+	var max_value = 3
 	while true:
 		#Elije minijuego de forma aleatoria
 		minigame_id = randi() % (max_value - min_value + 1) + min_value
@@ -72,6 +72,7 @@ func change_scene():
 		0: GameManager.load_attorney_scene()
 		1: GameManager.load_kirby_scene()
 		2: GameManager.load_platformer_scene()
+		3: GameManager.load_galaga_scene()
 
 func _on_audio_stream_player_transition_finished():
 	change_scene()

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dje2fta1nw186"
-path="res://.godot/imported/galaga_destroyed.wav-1bbdfa6346f2599bea0ab82fa2326e2d.sample"
+path="res://.godot/imported/galaga_explosion.wav-5b90b2b07e6a9c6770538ffdfe27c477.sample"
 
 [deps]
 
-source_file="res://assets/Galaga_Minigame/sounds/galaga_destroyed.wav"
-dest_files=["res://.godot/imported/galaga_destroyed.wav-1bbdfa6346f2599bea0ab82fa2326e2d.sample"]
+source_file="res://assets/Galaga_Minigame/sounds/galaga_explosion.wav"
+dest_files=["res://.godot/imported/galaga_explosion.wav-5b90b2b07e6a9c6770538ffdfe27c477.sample"]
 
 [params]
 

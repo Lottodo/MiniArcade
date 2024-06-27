@@ -14,6 +14,7 @@ var intermission_scene : PackedScene = preload("res://scenes/intermission/interm
 var kirby_scene : PackedScene = preload("res://scenes/kirb_minigame/samurai_minigame/kirb_minigame.tscn")
 var platformer_scene : PackedScene = preload("res://scenes/platformer_minigame/superstarsaga_lvl/superstarsaga_lvl.tscn")
 var attorney_scene : PackedScene = preload("res://scenes/attorney_minigame/ace_attorney_minigame.tscn")
+var galaga_scene : PackedScene = preload("res://scenes/galaga_minigame/galaga_lvl/galaga_lvl.tscn")
 
 ###############################################
 #				Funcion Ready				  #
@@ -41,6 +42,9 @@ func load_platformer_scene():
 
 func load_attorney_scene():
 	get_tree().change_scene_to_packed(attorney_scene)
+
+func load_galaga_scene():
+	get_tree().change_scene_to_packed(galaga_scene)
 
 func transition_scenes():
 	TransitionScreen.transition()

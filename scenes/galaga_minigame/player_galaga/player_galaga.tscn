@@ -17,3 +17,5 @@ texture = ExtResource("2_rorkn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5, 1)
 shape = SubResource("RectangleShape2D_4xv61")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
