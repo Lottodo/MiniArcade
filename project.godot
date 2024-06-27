@@ -74,6 +74,8 @@ start={
 2d_physics/layer_1="Player"
 2d_physics/layer_2="PlatformerBullet"
 2d_physics/layer_3="PlatformerPlatform"
+2d_physics/layer_4="GalagaAlien"
+2d_physics/layer_5="GalagaBullet"
 
 [rendering]
 

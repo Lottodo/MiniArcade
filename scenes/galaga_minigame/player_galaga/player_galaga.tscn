@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://k161j1ivoadr"]
+
+[ext_resource type="Script" path="res://scenes/galaga_minigame/player_galaga/player_galaga.gd" id="1_n23x2"]
+[ext_resource type="Texture2D" uid="uid://d3ful65e8fmrt" path="res://assets/Galaga_Minigame/sprites/spaceship.png" id="2_rorkn"]
+[ext_resource type="PackedScene" uid="uid://caid6g4cp6yhl" path="res://scenes/galaga_minigame/galaga_bullet/galaga_bullet.tscn" id="2_tgb8e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xv61"]
+size = Vector2(1068, 1140)
+
+[node name="PlayerGalaga" type="CharacterBody2D"]
+script = ExtResource("1_n23x2")
+item = ExtResource("2_tgb8e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_rorkn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, 1)
+shape = SubResource("RectangleShape2D_4xv61")

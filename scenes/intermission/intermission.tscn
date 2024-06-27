@@ -211,7 +211,7 @@ offset_left = 2.0
 offset_top = -135.0
 offset_right = 1154.0
 offset_bottom = -94.0
-text = "Press Enter to exit"
+text = "Press A to exit"
 label_settings = SubResource("LabelSettings_lhwa4")
 horizontal_alignment = 1
 

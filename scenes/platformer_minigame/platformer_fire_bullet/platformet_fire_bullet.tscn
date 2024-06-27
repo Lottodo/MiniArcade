@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://djlkk1co3fepy"]
 
 [ext_resource type="Script" path="res://scenes/platformer_minigame/platformer_fire_bullet/platformet_fire_bullet.gd" id="1_45qar"]
-[ext_resource type="Texture2D" uid="uid://dfalbgoo7cvr0" path="res://assets/Platformer_Minigame/sprites/fire_bullet.png" id="1_th8iu"]
+[ext_resource type="Texture2D" uid="uid://c4bl15ltcw1fc" path="res://assets/Platformer_Minigame/sprites/fire_bullet.png" id="1_th8iu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_24d8c"]
 atlas = ExtResource("1_th8iu")

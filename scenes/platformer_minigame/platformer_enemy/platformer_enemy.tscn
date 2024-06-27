@@ -1,10 +1,9 @@
-[gd_scene load_steps=38 format=3 uid="uid://ht85oaudteid"]
+[gd_scene load_steps=37 format=3 uid="uid://ht85oaudteid"]
 
 [ext_resource type="Script" path="res://scenes/platformer_minigame/platformer_enemy/platformer_enemy.gd" id="1_hgfa6"]
-[ext_resource type="Texture2D" uid="uid://rtvmxlhtuyke" path="res://assets/Platformer_Minigame/sprites/enemy_idle.png" id="1_sq1g5"]
-[ext_resource type="PackedScene" uid="uid://djlkk1co3fepy" path="res://scenes/platformer_minigame/platformer_fire_bullet/platformet_fire_bullet.tscn" id="2_1oiuf"]
-[ext_resource type="Texture2D" uid="uid://cpu3f7kgvvjp2" path="res://assets/Platformer_Minigame/sprites/enemy_attack.png" id="2_jqrv2"]
-[ext_resource type="Texture2D" uid="uid://b13162hs60jhu" path="res://assets/Platformer_Minigame/sprites/enemy_postattack.png" id="2_w5try"]
+[ext_resource type="Texture2D" uid="uid://dkbem3vu4olvv" path="res://assets/Platformer_Minigame/sprites/enemy_idle.png" id="1_sq1g5"]
+[ext_resource type="Texture2D" uid="uid://b4ukjadjfr2dn" path="res://assets/Platformer_Minigame/sprites/enemy_attack.png" id="2_jqrv2"]
+[ext_resource type="Texture2D" uid="uid://chp87y37ahqv8" path="res://assets/Platformer_Minigame/sprites/enemy_postattack.png" id="2_w5try"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wy3q5"]
 atlas = ExtResource("1_sq1g5")
@@ -240,7 +239,6 @@ animations = [{
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_hgfa6")
-item = ExtResource("2_1oiuf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 0)
