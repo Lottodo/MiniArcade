@@ -25,6 +25,8 @@ const SOUND_KIRBY_START = "kirby_start"
 const SOUND_KIRBY_ALERT = "kirby_alert"
 const SOUND_KIRBY_BONK = "kirby_bonk"
 const SOUND_KIRBY_WRONG = "kirby_wrong"
+#Sonidos Galaga
+const SOUND_GALAGA_SONG = "galaga_song"
 
 var SOUNDS = {
 	SOUND_MAIN_MENU : preload("res://assets/Main_Menu/sound/menu_theme.wav"),
@@ -52,6 +54,8 @@ var SOUNDS = {
 	SOUND_KIRBY_ALERT : preload("res://assets/Kirb_Minigame/sounds/Attention_Sound.wav"),
 	SOUND_KIRBY_BONK : preload("res://assets/Kirb_Minigame/sounds/Bonk.wav"),
 	SOUND_KIRBY_WRONG : preload("res://assets/Kirb_Minigame/sounds/Wrong.wav"),
+	#Sonidos Galaga
+	SOUND_GALAGA_SONG : preload("res://assets/Galaga_Minigame/sounds/galaga_song.wav"),
 }
 
 func play_sound(audio_player: AudioStreamPlayer, sound: String):

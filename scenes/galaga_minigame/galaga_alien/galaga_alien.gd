@@ -24,3 +24,4 @@ func die():
 func _on_area_entered(area):
 	SPEED = 0
 	sprite.play("explosion")
+	SignalManager.on_alien_destroyed.emit()

@@ -1,17 +1,15 @@
 extends Node2D
 
-@onready var asp = $AudioStreamPlayer
 @onready var ending_timer = $EndingTimer
+@onready var asp = $AudioStreamPlayer
 
-var player_lost = false
+var player_lost: bool = false
 const SCORE: int = 1
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	SoundManager.play_sound(asp, SoundManager.SOUND_PLAT_BG)
-	SignalManager.platformer_on_damage.connect(on_player_lost)
-	SignalManager.platformer_on_bullet_out.connect(ending_game)
-
+	SoundManager.play_sound(asp, SoundManager.SOUND_GALAGA_SONG)
+	SignalManager.on_alien_destroyed.connect(on_player_lost)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -22,6 +20,11 @@ func on_player_lost():
 
 func ending_game():
 	ending_timer.start()
+
+func _on_game_timer_timeout():
+	print("Gameover")
+	SignalManager.on_timeout.emit()
+	ending_game()
 
 func _on_ending_timer_timeout():
 	if player_lost:

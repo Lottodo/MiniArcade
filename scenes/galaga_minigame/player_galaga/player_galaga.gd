@@ -4,9 +4,13 @@ extends CharacterBody2D
 
 const SPEED = 900.0
 var shoot_cd := false
+var can_move: bool = true
 
-func _process(_delta):
-	if Input.is_action_just_pressed("action_A"):
+func _ready():
+	SignalManager.on_timeout.connect(on_gameover)
+
+func _process(delta):
+	if Input.is_action_just_pressed("action_A") and can_move:
 		if !shoot_cd:
 			shoot_cd = true
 			shoot()
@@ -32,5 +36,7 @@ func shoot():
 	get_parent().add_child(new_item)
 	new_item.global_position = item_position
 	new_item.scale *= 0.05
-	
+
+func on_gameover():
+	can_move = false
 

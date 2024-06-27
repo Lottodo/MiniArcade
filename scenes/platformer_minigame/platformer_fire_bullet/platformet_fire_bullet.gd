@@ -27,19 +27,11 @@ func get_sin():
 	var frequency = 100
 	return sin(time * frequency) * amplitude
 
-
-
-
 func _on_screen_exited():
 	ending_timer.start()
-	
-	#queue_free()
-
-
 
 func _on_ending_timer_timeout():
 	SignalManager.platformer_on_bullet_out.emit()
-
 
 func _on_body_entered(body):
 	SignalManager.platformer_on_damage.emit()

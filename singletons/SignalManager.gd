@@ -28,3 +28,7 @@ signal on_wrong_evidence()
 #Plataformero
 signal platformer_on_damage()
 signal platformer_on_bullet_out()
+
+#Galaga
+signal on_alien_destroyed()
+signal on_timeout()
