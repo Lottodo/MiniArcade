@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 
 const SPEED : float = 120.0
-const GRAVITY : float = 1200.0
+const GRAVITY : float = 900.0
 const JUMP_HEIGHT : float = 300.0
 
 enum PLAYER_STATES {IDLE, RUN, JUMP, FALL, SHOOT, RUN_SHOOT}
