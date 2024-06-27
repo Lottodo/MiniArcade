@@ -4,6 +4,9 @@ extends Control
 
 func _ready():
 	SoundManager.play_sound(audio_player, SoundManager.SOUND_MAIN_MENU)
+	GameManager.global_lives = 4
+	GameManager.global_score = 0
+	GameManager.global_first_last_game_id = -1
 
 func _process(delta):
 	pass
