@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://c2jly8eh1vbjt"]
+
+[ext_resource type="Script" path="res://scenes/galaga_minigame/galaga_alien/galaga_alien.gd" id="1_7pavt"]
+[ext_resource type="Texture2D" uid="uid://eopf8ije0hgy" path="res://assets/Galaga_Minigame/sprites/nigga.png" id="2_6k7uc"]
+[ext_resource type="Texture2D" uid="uid://04sm78sfmhca" path="res://assets/Galaga_Minigame/sprites/alien_destruction.png" id="2_wcy44"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xe0x"]
+atlas = ExtResource("2_6k7uc")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxaml"]
+atlas = ExtResource("2_wcy44")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xyfc"]
+atlas = ExtResource("2_wcy44")
+region = Rect2(30, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqlom"]
+atlas = ExtResource("2_wcy44")
+region = Rect2(60, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2va5x"]
+atlas = ExtResource("2_wcy44")
+region = Rect2(90, 0, 30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xow25"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xe0x")
+}],
+"loop": false,
+"name": &"alien",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxaml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xyfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqlom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2va5x")
+}],
+"loop": true,
+"name": &"explosion",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mismp"]
+size = Vector2(1389.5, 1525)
+
+[node name="GalagaAlien" type="Area2D"]
+collision_layer = 8
+collision_mask = 16
+script = ExtResource("1_7pavt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(66, -198)
+scale = Vector2(50, 50)
+sprite_frames = SubResource("SpriteFrames_xow25")
+animation = &"explosion"
+autoplay = "alien"
+frame_progress = 0.549839
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(47.25, -200.5)
+shape = SubResource("RectangleShape2D_mismp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

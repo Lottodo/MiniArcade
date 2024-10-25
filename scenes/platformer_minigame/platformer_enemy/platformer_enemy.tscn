@@ -1,10 +1,10 @@
 [gd_scene load_steps=38 format=3 uid="uid://ht85oaudteid"]
 
 [ext_resource type="Script" path="res://scenes/platformer_minigame/platformer_enemy/platformer_enemy.gd" id="1_hgfa6"]
-[ext_resource type="Texture2D" uid="uid://d131wapntfc7x" path="res://assets/Platformer_Minigame/sprites/enemy_idle.png" id="1_sq1g5"]
+[ext_resource type="Texture2D" uid="uid://dkbem3vu4olvv" path="res://assets/Platformer_Minigame/sprites/enemy_idle.png" id="1_sq1g5"]
 [ext_resource type="PackedScene" uid="uid://djlkk1co3fepy" path="res://scenes/platformer_minigame/platformer_fire_bullet/platformet_fire_bullet.tscn" id="2_1oiuf"]
-[ext_resource type="Texture2D" uid="uid://5scvtqbavb3f" path="res://assets/Platformer_Minigame/sprites/enemy_attack.png" id="2_jqrv2"]
-[ext_resource type="Texture2D" uid="uid://c0cxnk31k7a17" path="res://assets/Platformer_Minigame/sprites/enemy_postattack.png" id="2_w5try"]
+[ext_resource type="Texture2D" uid="uid://b4ukjadjfr2dn" path="res://assets/Platformer_Minigame/sprites/enemy_attack.png" id="2_jqrv2"]
+[ext_resource type="Texture2D" uid="uid://chp87y37ahqv8" path="res://assets/Platformer_Minigame/sprites/enemy_postattack.png" id="2_w5try"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wy3q5"]
 atlas = ExtResource("1_sq1g5")
@@ -245,8 +245,10 @@ item = ExtResource("2_1oiuf")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_it806")
-animation = &"post_attack"
+animation = &"pre_attack"
 autoplay = "idle"
+frame = 14
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5, 11)
@@ -254,4 +256,10 @@ shape = SubResource("RectangleShape2D_mootl")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

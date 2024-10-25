@@ -1,13 +1,64 @@
-[gd_scene load_steps=7 format=3 uid="uid://b03ui5vemmxx1"]
+[gd_scene load_steps=15 format=3 uid="uid://b03ui5vemmxx1"]
 
 [ext_resource type="Script" path="res://scenes/platformer_minigame/superstarsaga_lvl/superstarsaga_lvl.gd" id="1_i0wcr"]
-[ext_resource type="Texture2D" uid="uid://duvow4n4l30yw" path="res://assets/Platformer_Minigame/sprites/level_bg.png" id="2_htn8m"]
+[ext_resource type="Texture2D" uid="uid://ca5uqho7b7xje" path="res://assets/Platformer_Minigame/sprites/level_bg.png" id="2_htn8m"]
 [ext_resource type="PackedScene" uid="uid://ht85oaudteid" path="res://scenes/platformer_minigame/platformer_enemy/platformer_enemy.tscn" id="3_vyva5"]
 [ext_resource type="PackedScene" uid="uid://dvka8b2q08llj" path="res://scenes/platformer_minigame/platformer_player/platformer_player.tscn" id="4_njrgt"]
-[ext_resource type="Texture2D" uid="uid://bk5tof6wrp1vu" path="res://assets/Platformer_Minigame/sprites/player_shadow.png" id="5_xvgea"]
+[ext_resource type="Texture2D" uid="uid://cainiix46ujvb" path="res://assets/Platformer_Minigame/sprites/player_shadow.png" id="5_xvgea"]
+[ext_resource type="Texture2D" uid="uid://i7a4ebvxac5x" path="res://assets/Platformer_Minigame/sprites/a_button.png" id="6_nlcc0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27dbt"]
 size = Vector2(84, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chshr"]
+atlas = ExtResource("6_nlcc0")
+region = Rect2(0, 0, 16, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14bco"]
+atlas = ExtResource("6_nlcc0")
+region = Rect2(0, 30, 16, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qh81r"]
+atlas = ExtResource("6_nlcc0")
+region = Rect2(0, 60, 16, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwgxu"]
+atlas = ExtResource("6_nlcc0")
+region = Rect2(0, 90, 16, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pomed"]
+atlas = ExtResource("6_nlcc0")
+region = Rect2(0, 120, 16, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndoav"]
+atlas = ExtResource("6_nlcc0")
+region = Rect2(0, 150, 16, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ie2dk"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_chshr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14bco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qh81r")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_vwgxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pomed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndoav")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
 
 [node name="SuperstarsagaLvl" type="Node2D"]
 script = ExtResource("1_i0wcr")
@@ -24,10 +75,6 @@ texture = ExtResource("2_htn8m")
 position = Vector2(-111, 672)
 limit_left = 0
 limit_bottom = 0
-
-[node name="PlatformerEnemy" parent="." instance=ExtResource("3_vyva5")]
-position = Vector2(946, -298)
-scale = Vector2(4.5, 4.5)
 
 [node name="PlayerShadow" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.368627)
@@ -49,3 +96,19 @@ collision_layer = 4
 position = Vector2(215, -137)
 shape = SubResource("RectangleShape2D_27dbt")
 debug_color = Color(0.735367, 0.22647, 1, 0.42)
+
+[node name="EndingTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(330, -450)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_ie2dk")
+autoplay = "default"
+frame_progress = 0.416913
+
+[node name="PlatformerEnemy" parent="." instance=ExtResource("3_vyva5")]
+position = Vector2(942, -296)
+scale = Vector2(4.5, 4.5)
+
+[connection signal="timeout" from="EndingTimer" to="." method="_on_ending_timer_timeout"]

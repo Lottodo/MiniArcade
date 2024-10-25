@@ -21,6 +21,7 @@ GameManager="*res://singletons/GameManager.gd"
 SignalManager="*res://singletons/SignalManager.gd"
 SoundManager="*res://singletons/SoundManager.gd"
 ImageManager="*res://singletons/ImageManager.gd"
+TransitionScreen="*res://scenes/transition/transition_screen.tscn"
 
 [display]
 
@@ -62,12 +63,19 @@ action_B={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":80,"key_label":0,"unicode":112,"echo":false,"script":null)
 ]
 }
+start={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
 
 [layer_names]
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="PlatformerBullet"
 2d_physics/layer_3="PlatformerPlatform"
+2d_physics/layer_4="GalagaAlien"
+2d_physics/layer_5="GalagaBullet"
 
 [rendering]
 

@@ -7,10 +7,14 @@ const SPEED = 300.0
 const JUMP_SPEED: float = 1000
 const GRAVITY: float = 3000.0
 
-enum PLAYER_STATE {IDLE, RUN, FALL, JUMP, HURT, DRIFT}
+enum PLAYER_STATE {IDLE, RUN, FALL, JUMP, HURT, WON}
 
 var current_state: PLAYER_STATE = PLAYER_STATE.IDLE
 var is_hurt: bool = false
+var game_ended: bool = false
+
+func _ready():
+	SignalManager.platformer_on_bullet_out.connect(on_game_end)
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -19,7 +23,7 @@ func _physics_process(delta):
 		apply_gravity(delta)
 	
 	# Handle jump.
-	if Input.is_action_just_pressed("action_A"):
+	if Input.is_action_just_pressed("action_A") and !is_hurt and !game_ended and is_on_floor():
 		velocity.y += -JUMP_SPEED
 	
 	calculate_state()
@@ -32,6 +36,8 @@ func apply_gravity(delta: float):
 func calculate_state():
 	if is_hurt:
 		set_state(PLAYER_STATE.HURT)
+	elif game_ended:
+		set_state(PLAYER_STATE.WON)
 	else:
 		if is_on_floor():
 			set_state(PLAYER_STATE.IDLE)
@@ -59,9 +65,12 @@ func set_state(new_state: PLAYER_STATE):
 			PLAYER_STATE.HURT:
 				anim_player.play("mario_hurt")
 				SoundManager.play_sound(asp, SoundManager.SOUND_PLAT_LOST1)
+			PLAYER_STATE.WON:
+				anim_player.play("mario_win")
+				SoundManager.play_sound(asp, SoundManager.SOUND_PLAT_WIN1)
 
 func _on_bullet_area_entered(area):
 	is_hurt = true
 
-func on_proyectil_screen_exited():
-	print("Debug")
+func on_game_end():
+	game_ended = true

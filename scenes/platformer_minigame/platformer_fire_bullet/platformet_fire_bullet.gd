@@ -1,12 +1,16 @@
 extends Area2D
 
 @onready var sprite = $AnimatedSprite2D
+@onready var ending_timer = $EndingTimer
 
-var speed = -1000
+var speed = -1400
 var rot_speed: float = 3.0 * PI * 2.0
 var time: float
 
 func _ready():
+	var min_value = 1.0
+	var max_value = 1.4
+	#speed *= randf_range(min_value, max_value)
 	sprite.flip_h = true
 
 func _physics_process(delta):
@@ -23,9 +27,11 @@ func get_sin():
 	var frequency = 100
 	return sin(time * frequency) * amplitude
 
-
-
-
 func _on_screen_exited():
-	get_tree().call_group("Player", "on_proyectil_screen_exited")
-	#queue_free()
+	ending_timer.start()
+
+func _on_ending_timer_timeout():
+	SignalManager.platformer_on_bullet_out.emit()
+
+func _on_body_entered(body):
+	SignalManager.platformer_on_damage.emit()

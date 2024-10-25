@@ -1,4 +1,180 @@
-[gd_scene format=3 uid="uid://csa08lwob1qdq"]
+[gd_scene load_steps=32 format=3 uid="uid://csa08lwob1qdq"]
+
+[ext_resource type="Texture2D" uid="uid://dcjamkhcsnlnh" path="res://assets/intermission/assets/arcade_screen.png" id="1_kk5e4"]
+[ext_resource type="Script" path="res://scenes/intermission/intermission.gd" id="1_rw8rm"]
+[ext_resource type="Texture2D" uid="uid://cpd4n7mec5pyo" path="res://assets/intermission/assets/screen_bg.png" id="2_vbe3p"]
+[ext_resource type="Texture2D" uid="uid://m0bveqj7ahm" path="res://assets/intermission/assets/coin_destruction.png" id="3_1uj3c"]
+[ext_resource type="FontFile" uid="uid://dxfeie8c3xuq7" path="res://assets/fonts/Retro Gaming.ttf" id="3_ej3b8"]
+[ext_resource type="Texture2D" uid="uid://d0va82rmkwamc" path="res://assets/intermission/assets/screen_lines.png" id="3_mctda"]
+[ext_resource type="Texture2D" uid="uid://cdqo2ejkbst8u" path="res://assets/intermission/assets/coin_sheet.png" id="4_8dxu6"]
+[ext_resource type="SpriteFrames" uid="uid://cq1qwy3ib1mae" path="res://resources/animation/coin.tres" id="4_j4n7n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ayc8w"]
+font = ExtResource("3_ej3b8")
+font_size = 150
+
+[sub_resource type="LabelSettings" id="LabelSettings_y224h"]
+font = ExtResource("3_ej3b8")
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_lhwa4"]
+font = ExtResource("3_ej3b8")
+font_size = 32
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ekvv"]
+atlas = ExtResource("3_1uj3c")
+region = Rect2(0, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3r42b"]
+atlas = ExtResource("3_1uj3c")
+region = Rect2(148, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0cue"]
+atlas = ExtResource("3_1uj3c")
+region = Rect2(222, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7b726"]
+atlas = ExtResource("3_1uj3c")
+region = Rect2(296, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uww15"]
+atlas = ExtResource("3_1uj3c")
+region = Rect2(370, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4k5h1"]
+atlas = ExtResource("3_1uj3c")
+region = Rect2(444, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0udw"]
+atlas = ExtResource("4_8dxu6")
+region = Rect2(0, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_012pn"]
+atlas = ExtResource("4_8dxu6")
+region = Rect2(74, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ask38"]
+atlas = ExtResource("4_8dxu6")
+region = Rect2(148, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekohy"]
+atlas = ExtResource("4_8dxu6")
+region = Rect2(222, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncl7t"]
+atlas = ExtResource("4_8dxu6")
+region = Rect2(296, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl030"]
+atlas = ExtResource("4_8dxu6")
+region = Rect2(370, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pojit"]
+atlas = ExtResource("4_8dxu6")
+region = Rect2(444, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bp751"]
+atlas = ExtResource("4_8dxu6")
+region = Rect2(518, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc0mo"]
+atlas = ExtResource("4_8dxu6")
+region = Rect2(592, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4kow"]
+atlas = ExtResource("4_8dxu6")
+region = Rect2(666, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oa8dc"]
+atlas = ExtResource("4_8dxu6")
+region = Rect2(740, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scxxq"]
+atlas = ExtResource("4_8dxu6")
+region = Rect2(814, 0, 74, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1lof"]
+atlas = ExtResource("4_8dxu6")
+region = Rect2(888, 0, 74, 74)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3fopg"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_1ekvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3r42b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0cue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7b726")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uww15")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_4k5h1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7b726")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0cue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3r42b")
+}],
+"loop": true,
+"name": &"coin_destruction",
+"speed": 18.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_e0udw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_012pn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ask38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekohy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncl7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl030")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pojit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bp751")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nc0mo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4kow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oa8dc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scxxq")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_a1lof")
+}],
+"loop": true,
+"name": &"coin_flip",
+"speed": 24.0
+}]
 
 [node name="Intermission" type="Control"]
 layout_mode = 3
@@ -7,3 +183,104 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rw8rm")
+
+[node name="ArcadeScreen" type="Sprite2D" parent="."]
+position = Vector2(576, -325)
+scale = Vector2(0.383901, 0.291932)
+texture = ExtResource("2_vbe3p")
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 0
+offset_top = -387.0
+offset_right = 1152.0
+offset_bottom = -196.0
+text = "X"
+label_settings = SubResource("LabelSettings_ayc8w")
+horizontal_alignment = 1
+
+[node name="EndScoreLabel" type="Label" parent="."]
+layout_mode = 0
+offset_top = -233.0
+offset_right = 1152.0
+offset_bottom = -131.0
+text = "Final Score: X"
+label_settings = SubResource("LabelSettings_y224h")
+horizontal_alignment = 1
+
+[node name="GameOverLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -135.0
+offset_right = 1154.0
+offset_bottom = -94.0
+text = "Press A to exit"
+label_settings = SubResource("LabelSettings_lhwa4")
+horizontal_alignment = 1
+
+[node name="CoinsContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 1160.93
+offset_top = -651.23
+offset_right = 1200.93
+offset_bottom = -611.23
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CoinsContainer"]
+position = Vector2(-885.43, 233.73)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_3fopg")
+animation = &"coin_flip"
+autoplay = "coin_flip"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CoinsContainer"]
+position = Vector2(-687.43, 158.73)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_3fopg")
+animation = &"coin_flip"
+autoplay = "coin_flip"
+frame_progress = 0.345819
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="CoinsContainer"]
+position = Vector2(-469.43, 158.73)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_3fopg")
+animation = &"coin_flip"
+autoplay = "coin_flip"
+frame_progress = 0.207125
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="CoinsContainer"]
+position = Vector2(-252.93, 236.23)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_3fopg")
+animation = &"coin_flip"
+autoplay = "coin_flip"
+frame_progress = 0.345819
+
+[node name="ArcadeScreenLines" type="Sprite2D" parent="."]
+position = Vector2(576, -324)
+scale = Vector2(0.384, 0.292155)
+texture = ExtResource("3_mctda")
+
+[node name="ArcadeBorder" type="Sprite2D" parent="."]
+position = Vector2(576, -324.5)
+scale = Vector2(0.384, 0.291704)
+texture = ExtResource("1_kk5e4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_bottom = 0
+
+[node name="AudioStreamPlayerTrans" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayerState" type="AudioStreamPlayer" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(323, -467)
+scale = Vector2(1.48649, 1.48649)
+sprite_frames = ExtResource("4_j4n7n")
+autoplay = "default"
+frame_progress = 0.552461
+
+[connection signal="finished" from="AudioStreamPlayerTrans" to="." method="_on_audio_stream_player_transition_finished"]
+[connection signal="finished" from="AudioStreamPlayerState" to="." method="_on_audio_stream_player_state_finished"]

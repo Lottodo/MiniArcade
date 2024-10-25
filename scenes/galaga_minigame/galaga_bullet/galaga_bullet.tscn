@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://caid6g4cp6yhl"]
+
+[ext_resource type="Texture2D" uid="uid://cfluivyoyu6x" path="res://assets/Galaga_Minigame/sprites/bullet.PNG" id="1_20tqx"]
+[ext_resource type="Script" path="res://scenes/galaga_minigame/galaga_bullet/galaga_bullet.gd" id="1_wclga"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfcmk"]
+size = Vector2(576, 1143)
+
+[node name="GalagaBullet" type="Area2D"]
+collision_layer = 16
+collision_mask = 8
+script = ExtResource("1_wclga")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_20tqx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -1.5)
+shape = SubResource("RectangleShape2D_gfcmk")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

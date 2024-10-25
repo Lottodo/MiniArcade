@@ -1,0 +1,89 @@
+[gd_scene load_steps=13 format=3 uid="uid://c1rgybwfyxbuj"]
+
+[ext_resource type="Script" path="res://scenes/megaman_minigame/Player_Megaman/player_megaman.gd" id="1_c2mkq"]
+[ext_resource type="Texture2D" uid="uid://ctfcmpmnsqr63" path="res://assets/Megaman_Minigame/Megaman/Idle.png" id="1_p52wu"]
+[ext_resource type="Texture2D" uid="uid://crhipuwq5nlxr" path="res://assets/Megaman_Minigame/Megaman/Shoot_Idle.png" id="2_ga2co"]
+[ext_resource type="Texture2D" uid="uid://cqdjmrt116jqg" path="res://assets/Megaman_Minigame/Megaman/Jump.png" id="3_dmary"]
+[ext_resource type="Texture2D" uid="uid://be4777quc0fy" path="res://assets/Megaman_Minigame/Megaman/Run0.png" id="4_a8625"]
+[ext_resource type="Texture2D" uid="uid://cnt8ctfgmlem0" path="res://assets/Megaman_Minigame/Megaman/Run1.png" id="5_aqsqc"]
+[ext_resource type="Texture2D" uid="uid://2md2fmpgktj2" path="res://assets/Megaman_Minigame/Megaman/Run2.png" id="6_wvf4x"]
+[ext_resource type="Texture2D" uid="uid://83joim0p82s3" path="res://assets/Megaman_Minigame/Megaman/Run_Shoot.png" id="7_vfp3n"]
+[ext_resource type="Texture2D" uid="uid://ejx3h2wl0nb4" path="res://assets/Megaman_Minigame/Megaman/Run_Shoot1.png" id="8_j0tha"]
+[ext_resource type="Texture2D" uid="uid://bsjukrx4tw4px" path="res://assets/Megaman_Minigame/Megaman/Run_Shoot2.png" id="9_tbx3e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v7muf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p52wu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dmary")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a8625")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aqsqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wvf4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aqsqc")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_vfp3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j0tha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tbx3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j0tha")
+}],
+"loop": true,
+"name": &"run_shoot",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ga2co")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrcv5"]
+size = Vector2(22, 25)
+
+[node name="PlayerMegaman" type="CharacterBody2D"]
+script = ExtResource("1_c2mkq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_v7muf")
+animation = &"run"
+autoplay = "idle"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_qrcv5")

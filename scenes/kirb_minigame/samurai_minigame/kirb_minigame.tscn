@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b2skuaea7m0k"]
+[gd_scene load_steps=10 format=3 uid="uid://b2skuaea7m0k"]
 
-[ext_resource type="Texture2D" uid="uid://d0c3yeou7d6lb" path="res://assets/Kirb_Minigame/sprites/background.png" id="1_fbrff"]
+[ext_resource type="Texture2D" uid="uid://bnq8gwuev2x13" path="res://assets/Kirb_Minigame/sprites/background.png" id="1_fbrff"]
 [ext_resource type="Script" path="res://scenes/kirb_minigame/samurai_minigame/kirb_minigame.gd" id="1_un5dr"]
 [ext_resource type="PackedScene" uid="uid://dpud5lkvmotrr" path="res://scenes/kirb_minigame/kirby_player/kirby_player.tscn" id="2_gip8j"]
 [ext_resource type="Texture2D" uid="uid://boc26sd71oewa" path="res://assets/Kirb_Minigame/sprites/Attention_Sprite.png" id="2_w4bqh"]
 [ext_resource type="PackedScene" uid="uid://cwfq625ghp2d8" path="res://scenes/kirb_minigame/waddle_enemy/waddle_enemy.tscn" id="3_40jkk"]
+[ext_resource type="Texture2D" uid="uid://c5j3hfg03rj3t" path="res://assets/Kirb_Minigame/sprites/X_Mark.png" id="6_jp2u1"]
 
 [sub_resource type="Animation" id="Animation_vs6a6"]
 resource_name = "attention"
@@ -37,7 +38,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_bdgf4"]
 resource_name = "flash"
-length = 0.25
+length = 0.5
 step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -46,7 +47,7 @@ tracks/0/path = NodePath("ColorRect:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.06, 0.2),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -58,10 +59,10 @@ tracks/1/path = NodePath("ColorRect:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.06, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false, true, false]
+"values": [true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cph01"]
@@ -96,8 +97,22 @@ position = Vector2(60, -78)
 [node name="WaddleEnemy" parent="." instance=ExtResource("3_40jkk")]
 position = Vector2(185, -77)
 
+[node name="PenaltyMark" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 71.0
+offset_top = -107.0
+offset_right = 111.0
+offset_bottom = -67.0
+grow_vertical = 0
+scale = Vector2(-0.5, -0.5)
+texture = ExtResource("6_jp2u1")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -123,5 +138,9 @@ one_shot = true
 [node name="ActionTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="EndingTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="WaitingTimer" to="." method="_on_waiting_timer_timeout"]
 [connection signal="timeout" from="ActionTimer" to="." method="_on_action_timer_timeout"]
+[connection signal="timeout" from="EndingTimer" to="." method="_on_ending_timer_timeout"]
